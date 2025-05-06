@@ -18,4 +18,18 @@
                        <servlet-name>StaffinsertServlet</servlet-name>
                        <url-pattern>/StaffinsertServlet</url-pattern>
         </servlet-mapping>
+                 
+         <servlet>
+         
+              <servlet-name>StaffGetAll</servlet-name>
+              <servlet-class>staffPackage.StaffGetAll</servlet-class>
+              
+        </servlet>
+         
+         
+         <servlet-mapping>
+                       
+                       <servlet-name>StaffGetAll</servlet-name>
+                       <url-pattern>/StaffGetAll</url-pattern>
+        </servlet-mapping>
          </web-app>

@@ -30,7 +30,7 @@
                 </thead>
                
                 <tbody class="bg-white divide-y divide-gray-200">
-                 <c:forEach var="books" items="${allStaffs}">
+                 <c:forEach var="book" items="${allStaffs}">
                     <tr class="hover:bg-blue-50 transition duration-200">
                         <td class="px-4 py-3 font-medium">${books.id}</td>
                         <td class="px-4 py-3">${book.fullname}</td>

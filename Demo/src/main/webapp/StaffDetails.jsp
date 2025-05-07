@@ -30,31 +30,39 @@
                     </tr>
                 </thead>
                
-                <tbody class="bg-white divide-y divide-gray-200">
-                 <c:forEach var="book" items="${allStaffs}">
-                    <tr class="hover:bg-blue-50 transition duration-200">
-                        <td class="px-4 py-3 font-medium">${books.id}</td>
-                        <td class="px-4 py-3">${book.fullname}</td>
-                        <td class="px-4 py-3">${book.address}</td>
-                        <td class="px-4 py-3">${book.email}</td>
-                        <td class="px-4 py-3">${book.age}</td>
-                        <td class="px-4 py-3">${book.username}</td>
-                        
-                        <td>
-                               <a href="UpdateStaff.jsp?id=${book.id}&fullname=${book.fullname}&address=${book.address}&email=${book.email}&age=${book.age}&username=${book.username}">                    
-                        <button>Update</button>
-                        </a>
-                        
-                        <form action="DeleteStaffServlet" method="post">
-                        <input type="hidden" name="id" value="${book.id}"/>
-                           <button>Delete</button>
-                             
-                        </form>
-                         </td>
-                        
-                        
-                    </tr>
-                   </c:forEach>
+            <tbody class="bg-white divide-y divide-gray-200">
+    <c:forEach var="book" items="${allStaffs}">
+        <tr class="hover:bg-blue-50 transition duration-200">
+            <td class="px-4 py-3 font-medium text-gray-700">${book.id}</td>
+            <td class="px-4 py-3 text-gray-600">${book.fullname}</td>
+            <td class="px-4 py-3 text-gray-600">${book.address}</td>
+            <td class="px-4 py-3 text-gray-600">${book.email}</td>
+            <td class="px-4 py-3 text-gray-600">${book.age}</td>
+            <td class="px-4 py-3 text-gray-600">${book.username}</td>
+            <td class="px-4 py-3 flex space-x-2">
+                <!-- Update Button -->
+                <a href="UpdateStaff.jsp?id=${book.id}&fullname=${book.fullname}&address=${book.address}&email=${book.email}&age=${book.age}&username=${book.username}"
+                   class="inline-block">
+                    <button type="button"
+                        class="px-3 py-1 bg-blue-600 text-white rounded hover:bg-blue-700 transition duration-200">
+                        Update
+                    </button>
+                </a>
+
+                <!-- Delete Button -->
+                <form action="DeleteStaffServlet" method="post" onsubmit="return confirm('Are you sure you want to delete this staff?');">
+                    <input type="hidden" name="id" value="${book.id}" />
+                    <button type="submit"
+                        class="px-3 py-1 bg-red-600 text-white rounded hover:bg-red-700 transition duration-200">
+                        Delete
+                    </button>
+                </form>
+            </td>
+        </tr>
+    </c:forEach>
+</tbody>
+
+                  
                     <!-- Add more static rows or dynamically generate with JSP -->
                 </tbody>
             </table>

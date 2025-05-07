@@ -26,6 +26,7 @@
                         <th class="px-4 py-3">Email</th>
                         <th class="px-4 py-3">Age</th>
                         <th class="px-4 py-3">Username</th>
+                        <th class="px-4 py-3">Action</th>
                     </tr>
                 </thead>
                
@@ -38,6 +39,14 @@
                         <td class="px-4 py-3">${book.email}</td>
                         <td class="px-4 py-3">${book.age}</td>
                         <td class="px-4 py-3">${book.username}</td>
+                        
+                        <td>
+                               <a href="UpdateStaff.jsp?id=${book.id}&fullname=${book.fullname}&address=${book.address}&email=${book.email}&age=${book.age}&username=${book.username}">                    
+                        <button>Update</button>
+                        </a>
+                         </td>
+                        
+                        
                     </tr>
                    </c:forEach>
                     <!-- Add more static rows or dynamically generate with JSP -->

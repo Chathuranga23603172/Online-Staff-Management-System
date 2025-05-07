@@ -11,7 +11,7 @@ import java.util.List;
 
 public class StaffController {
 	
-	private static boolean inSuccess;
+	private static boolean isSuccess;
 	private static Connection con =null;
 	private static Statement stmt = null;
 	private static ResultSet rs = null;
@@ -76,7 +76,7 @@ public class StaffController {
 	
 	//Get All
 	public static List<StaffModel> getAllStaff(){
-		ArrayList<StaffModel> books = new ArrayList<>();
+		ArrayList<StaffModel> book = new ArrayList<>();
 		try {
 			con=DBConnection.getConnection();
 			stmt=con.createStatement();
@@ -94,12 +94,38 @@ public class StaffController {
 				String username = rs.getString(6);
 				
 				StaffModel sta = new StaffModel(id,fullname,address,email,age,username);
-				books.add(sta);
+				book.add(sta);
 				
 			}
 		}catch(Exception e) {
 			e.printStackTrace();
 		}
-		return books;
+		return book;
+	}
+	
+	//Update Data
+	public static boolean updatedata(String id,String fullname,String address,String email,String age,String username) {
+		
+		try {
+			con=DBConnection.getConnection();
+			stmt=con.createStatement();
+			
+			String sql ="update book set fullname='"+fullname+"',address='"+address+"',email='"+email+"',age='"+age+"',username='"+username+"'"
+					+ "where id='"+id+"'" ;
+			
+			int rs = stmt.executeUpdate(sql);
+			
+			if(rs>0) {
+				isSuccess = true;
+			}
+			
+			else {
+				isSuccess = false;
+			}
+			
+		}catch(Exception e) {
+			e.printStackTrace();
+		}
+		return isSuccess;
 	}
 }

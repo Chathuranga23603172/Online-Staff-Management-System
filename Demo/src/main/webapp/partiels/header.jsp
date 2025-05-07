@@ -40,7 +40,7 @@
 
             <!-- User & Cart Icons -->
             <div class="flex items-center space-x-4">
-                <a href="#" class="text-gray-700 hover:text-blue-500">
+                <a href="ProfileServlet" class="text-gray-700 hover:text-blue-500">
                     <i class="far fa-user text-xl"></i>
                 </a>
 

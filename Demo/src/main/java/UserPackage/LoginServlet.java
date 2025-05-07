@@ -32,7 +32,7 @@ public class LoginServlet extends HttpServlet {
 			if(userlogin != null && !userlogin.isEmpty()) {
 				
 				request.getSession().setAttribute("user", userlogin.get(0));
-				response.sendRedirect("ProfileServlet");
+				response.sendRedirect("HomePage.jsp");
 			}else {
 				
 				String alertMessage = "Invalid Credentials.Please try again.";

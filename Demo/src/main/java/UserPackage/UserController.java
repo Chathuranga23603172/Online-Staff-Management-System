@@ -7,6 +7,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 import staffPackage.DBConnection;
+import staffPackage.StaffModel;
 
 public class UserController {
 	
@@ -106,4 +107,57 @@ public static List<UserModel> loginvalidate(String name,String password){
 	   return user;
    }
     //user data update
+   public static boolean updateProfile(String id,String name,String gmail,String password,String phone) {
+		
+		try {
+			con=DBConnection.getConnection();
+			stmt=con.createStatement();
+			
+			String sql ="update user set name='"+name+"',gmail='"+gmail+"',password='"+password+"',phone='"+phone+"'"
+					+ "where id='"+id+"'" ;
+			
+			int rs = stmt.executeUpdate(sql);
+			
+			if(rs>0) {
+				isSuccess = true;
+			}
+			
+			else {
+				isSuccess = false;
+			}
+			
+		}catch(Exception e) {
+			e.printStackTrace();
+		}
+		return isSuccess;
+	}
+   
+   public static List<UserModel> getAllUser(String Id){
+		ArrayList<UserModel> user = new ArrayList<>();
+		try {
+			con=DBConnection.getConnection();
+			stmt=con.createStatement();
+			
+			String sql="select * from user ";
+			
+			rs = stmt.executeQuery(sql);
+			
+			while(rs.next()) {
+				int id = rs.getInt(1);
+				String name = rs.getString(2);
+				String gmail = rs.getString(3);
+				String password = rs.getString(4);
+				String phone = rs.getString(5);
+				
+				
+				UserModel u = new UserModel(id,name,gmail,password,phone);
+				user.add(u);
+				
+			}
+		}catch(Exception e) {
+			e.printStackTrace();
+		}
+		return user;
+	}
+	
 }

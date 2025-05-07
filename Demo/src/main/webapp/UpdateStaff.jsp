@@ -3,10 +3,13 @@
 <!DOCTYPE html>
 <html>
 <head>
+    <title>Add Staff | BlueHorizon College</title>
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+    <script src="https://cdn.tailwindcss.com"></script>
 <meta charset="UTF-8">
 <title>Insert title here</title>
 </head>
-<body>
+<body class="bg-gradient-to-r from-blue-100 to-blue-300 min-h-screen flex items-center justify-center">
 <%
        String id = request.getParameter("id");
        String fullname = request.getParameter("fullname");

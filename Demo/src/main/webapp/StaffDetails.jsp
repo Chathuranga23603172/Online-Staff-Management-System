@@ -17,10 +17,13 @@
         </h2>
 
         <div class="overflow-x-auto">
+        <input type="text" id ="searchInput" placeholder="search">
+        
+        
             <table class="min-w-full table-auto border border-gray-200 text-sm text-left text-gray-700">
                 <thead class="bg-blue-600 text-white uppercase text-sm">
                     <tr>
-                        <th class="px-4 py-3">#</th>
+                        <th class="px-4 py-3">id</th>
                         <th class="px-4 py-3">Full Name</th>
                         <th class="px-4 py-3">Address</th>
                         <th class="px-4 py-3">Email</th>
@@ -60,6 +63,7 @@
             </td>
         </tr>
     </c:forEach>
+    
 </tbody>
 
                   
@@ -68,6 +72,35 @@
             </table>
         </div>
     </div>
+<script>
+    function filterTable() {
+        var input, filter, table, tr, td, i, j, textValue;
+        input = document.getElementById("searchInput");
+        filter = input.value.toUpperCase();
+        table = document.querySelector("table");
+        tr = table.getElementsByTagName("tr");
+
+        for (i = 1; i < tr.length; i++) { // Start at 1 to skip the header row
+            td = tr[i].getElementsByTagName("td");
+            tr[i].style.display = "none"; // Hide the row by default
+
+            for (j = 0; j < td.length; j++) {
+                if (td[j]) {
+                    textValue = td[j].textContent || td[j].innerText;
+                    if (textValue.toUpperCase().indexOf(filter) > -1) {
+                        tr[i].style.display = "";
+                        break;
+                    }
+                }
+            }
+        }
+    }
+
+    // Attach event listener after DOM is ready
+    document.addEventListener("DOMContentLoaded", function () {
+        document.getElementById("searchInput").addEventListener("input", filterTable);
+    });
+</script>
 
 </body>
 </html>

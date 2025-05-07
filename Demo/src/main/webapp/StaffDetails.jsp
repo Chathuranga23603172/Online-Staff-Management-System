@@ -12,24 +12,32 @@
 <body class="bg-gradient-to-br from-blue-100 to-blue-300 min-h-screen py-10 px-4">
 
     <div class="max-w-6xl mx-auto bg-white rounded-2xl shadow-xl p-8">
-        <h2 class="text-3xl font-bold text-blue-700 text-center mb-8">
-            <i class="fas fa-users mr-2"></i>Staff Members
+        <h2 class="text-3xl font-bold text-blue-700 text-center mb-8 flex items-center justify-center">
+            <i class="fas fa-users mr-2"></i> Staff Members
         </h2>
 
+        <!-- Search Input -->
+        <div class="flex justify-end mb-4">
+            <input
+                type="text"
+                id="searchInput"
+                placeholder="Search staff..."
+                class="w-full max-w-xs px-4 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500"
+            />
+        </div>
+
+        <!-- Table -->
         <div class="overflow-x-auto">
-        <input type="text" id ="searchInput" placeholder="search">
-        
-        
             <table class="min-w-full table-auto border border-gray-200 text-sm text-left text-gray-700">
                 <thead class="bg-blue-600 text-white uppercase text-sm">
                     <tr>
-                        <th class="px-4 py-3">id</th>
+                        <th class="px-4 py-3">ID</th>
                         <th class="px-4 py-3">Full Name</th>
                         <th class="px-4 py-3">Address</th>
                         <th class="px-4 py-3">Email</th>
                         <th class="px-4 py-3">Age</th>
                         <th class="px-4 py-3">Username</th>
-                        <th class="px-4 py-3">Action</th>
+                        <th class="px-4 py-3 text-center">Action</th>
                     </tr>
                 </thead>
                

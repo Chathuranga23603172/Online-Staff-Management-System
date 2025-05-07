@@ -44,6 +44,12 @@
                                <a href="UpdateStaff.jsp?id=${book.id}&fullname=${book.fullname}&address=${book.address}&email=${book.email}&age=${book.age}&username=${book.username}">                    
                         <button>Update</button>
                         </a>
+                        
+                        <form action="DeleteStaffServlet" method="post">
+                        <input type="hidden" name="id" value="${book.id}"/>
+                           <button>Delete</button>
+                             
+                        </form>
                          </td>
                         
                         

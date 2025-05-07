@@ -128,4 +128,34 @@ public class StaffController {
 		}
 		return isSuccess;
 	}
+	
+	//Delete Data
+	public static boolean deletedata(String id) {
+		
+		int convID = Integer.parseInt(id);
+		
+		try {
+			
+			 
+			//DBConnection
+			con=DBConnection.getConnection();
+			stmt=con.createStatement();
+			String sql = "delete from book where id='"+convID+"'";
+			int rs = stmt.executeUpdate(sql);
+			
+			if(rs>0) {
+				isSuccess = true;
+			}
+			
+			else {
+				isSuccess = false;
+			}
+			
+		}catch(Exception e) {
+			
+			e.printStackTrace();
+			
+		}
+		return isSuccess;
+	}
 }

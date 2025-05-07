@@ -33,6 +33,7 @@
                        <url-pattern>/StaffGetAll</url-pattern>
         </servlet-mapping>
         
+        
         <servlet>
          
               <servlet-name>UpdateServlet</servlet-name>
@@ -45,5 +46,18 @@
                        
                        <servlet-name>UpdateServlet</servlet-name>
                        <url-pattern>/UpdateServlet</url-pattern>
+        </servlet-mapping>
+             <servlet>
+         
+              <servlet-name>DeleteStaffServlet</servlet-name>
+              <servlet-class>staffPackage.DeleteStaffServlet</servlet-class>
+              
+        </servlet>
+         
+         
+         <servlet-mapping>
+                       
+                       <servlet-name>DeleteStaffServlet</servlet-name>
+                       <url-pattern>/DeleteStaffServlet</url-pattern>
         </servlet-mapping>
          </web-app>

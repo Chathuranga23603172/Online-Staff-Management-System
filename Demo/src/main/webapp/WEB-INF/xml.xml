@@ -60,4 +60,20 @@
                        <servlet-name>DeleteStaffServlet</servlet-name>
                        <url-pattern>/DeleteStaffServlet</url-pattern>
         </servlet-mapping>
+        
+        <!-- User InsertServlet-->
+                     <servlet>
+         
+              <servlet-name>/UserInsertServlet</servlet-name>
+              <servlet-class>UserPackage./UserInsertServlet</servlet-class>
+              
+        </servlet>
+         
+         
+         <servlet-mapping>
+                       
+                       <servlet-name>/UserInsertServlet</servlet-name>
+                       <url-pattern>//UserInsertServlet</url-pattern>
+        </servlet-mapping>
+        
          </web-app>

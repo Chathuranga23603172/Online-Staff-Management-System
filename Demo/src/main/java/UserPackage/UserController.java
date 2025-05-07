@@ -105,5 +105,5 @@ public static List<UserModel> loginvalidate(String name,String password){
 	   
 	   return user;
    }
-
+    //user data update
 }

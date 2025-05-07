@@ -29,16 +29,24 @@ public class LoginServlet extends HttpServlet {
 		try {
 			
 			List<UserModel> userlogin = UserController.loginvalidate(name,password);
+			if(userlogin != null && !userlogin.isEmpty()) {
+				
+				request.getSession().setAttribute("user", userlogin.get(0));
+				response.sendRedirect("ProfileServlet");
+			}else {
+				
+				String alertMessage = "Invalid Credentials.Please try again.";
+				response.getWriter().println("<script>alert('"+alertMessage+"');window.location.href='Login.jsp'</script>");
+			}
 			
-			request.setAttribute("userlogin", userlogin);
+			
 			
 		}catch(Exception e) {
 			
 			e.printStackTrace();
 		}
 		
-		RequestDispatcher dis = request.getRequestDispatcher("HomePage.jsp");
-		dis.forward(request, response);
+
 	}
 
 }

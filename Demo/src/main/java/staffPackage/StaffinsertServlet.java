@@ -27,7 +27,7 @@ public class StaffinsertServlet extends HttpServlet {
 		
 		if(isTrue == true) {
 			String alertMessage = "Data insert Successful.."; 
-			response.getWriter().println("<script> alert('"+alertMessage+"');window.location.href='StaffGetAll'</script>");
+			response.getWriter().println("<script> alert('"+alertMessage+"'); window.location.href='StaffGetAll'</script>");
 			
 		}
 		else {

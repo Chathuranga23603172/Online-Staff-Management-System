@@ -38,10 +38,7 @@
                 </button>
             </form>
 
-            <p class="mt-6 text-sm text-gray-600">
-                Already have an account?
-                <a href="Login.jsp" class="text-blue-600 font-medium hover:underline">Log In</a>
-            </p>
+  
         </div>
     </main>
 

@@ -41,7 +41,7 @@
             </div>
       <div>
                 <label class="block text-gray-700 font-semibold mb-2">Password</label>
-                <input type="text" name="password" value="<%=password%>" required
+                <input type="password" name="password" value="<%=password%>" required
                     class="w-full px-4 py-2 border rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500">
             </div>
 

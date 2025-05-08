@@ -129,4 +129,31 @@
                        <servlet-name>DeleteServlet</servlet-name>
                        <url-pattern>/DeleteServlet</url-pattern>
         </servlet-mapping>
+        
+                 <servlet>
+         
+              <servlet-name>UserGetAll</servlet-name>
+              <servlet-class>UserPackage.UserGetAll</servlet-class>
+              
+        </servlet>
+         
+         
+         <servlet-mapping>
+                       
+                       <servlet-name>UserGetAll</servlet-name>
+                       <url-pattern>/UserGetAll</url-pattern>
+        </servlet-mapping>
+                         <servlet>
+         
+              <servlet-name>AdminUpdateUser</servlet-name>
+              <servlet-class>UserPackage.AdminUpdateUser</servlet-class>
+              
+        </servlet>
+         
+         
+         <servlet-mapping>
+                       
+                       <servlet-name>AdminUpdateUser</servlet-name>
+                       <url-pattern>/AdminUpdateUser</url-pattern>
+        </servlet-mapping>
          </web-app>

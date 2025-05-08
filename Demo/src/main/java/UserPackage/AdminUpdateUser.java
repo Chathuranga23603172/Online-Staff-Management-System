@@ -42,7 +42,7 @@ public class AdminUpdateUser extends HttpServlet {
 			request.setAttribute("userdetails", userdetails);
 			String alertMessage = "Data Updated Successful.."; 
 			
-			response.getWriter().println("<script> alert('"+alertMessage+"'); window.location.href='userGetAll'</script>");
+			response.getWriter().println("<script> alert('"+alertMessage+"'); window.location.href='UserGetAll'</script>");
 			
 		}
 		else {

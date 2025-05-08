@@ -19,7 +19,7 @@
       </div>
       <nav class="space-x-6 text-gray-700 font-medium">
         <a href="#" class="hover:text-blue-600"><i class="fas fa-tachometer-alt mr-1"></i>Dashboard</a>
-        <a href="StaffAdd.jsp" class="hover:text-blue-600"><i class="fas fa-users mr-1"></i>Staff</a>
+        <a href="UserGetAll" class="hover:text-blue-600"><i class="fas fa-users mr-1"></i>Staff</a>
         <a href="#" class="hover:text-blue-600"><i class="fas fa-user-shield mr-1"></i>Admin</a>
         <a href="#" class="hover:text-blue-600"><i class="fas fa-cogs mr-1"></i>Settings</a>
         <a href="logout.jsp" class="text-red-500 hover:text-red-600"><i class="fas fa-sign-out-alt mr-1"></i>Logout</a>

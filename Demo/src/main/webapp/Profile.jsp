@@ -43,13 +43,22 @@
             </div>
         </div>
 
-        <div class="mt-10 flex justify-center gap-6">
+        <div class="mt-10 flex flex-wrap justify-center gap-4">
             <a href="UpdateProfile.jsp?id=${user.id}&name=${user.name}&gmail=${user.gmail}&password=${user.password}&phone=${user.phone}" 
-               class="px-6 py-2 bg-yellow-500 text-white font-medium rounded-full shadow hover:bg-yellow-600 transition duration-300">
+               class="px-6 py-2 bg-yellow-500 text-white font-medium rounded-full shadow hover:bg-yellow-600 transition duration-300 flex items-center">
                 <i class="fas fa-edit mr-2"></i>Edit
             </a>
+
+            <form action="DeleteServlet" method="post">
+                <input type="hidden" name="id" value="${user.id}" />
+                <button  
+                        class="px-6 py-2 bg-red-400 text-white font-medium rounded-full shadow hover:bg-red-500 transition duration-300 flex items-center">
+                    <i class="fas fa-trash-alt mr-2"></i>Delete
+                </button>
+            </form>
+
             <a href="logout.jsp" 
-               class="px-6 py-2 bg-red-500 text-white font-medium rounded-full shadow hover:bg-red-600 transition duration-300">
+               class="px-6 py-2 bg-blue-600 text-white font-medium rounded-full shadow hover:bg-blue-700 transition duration-300 flex items-center">
                 <i class="fas fa-sign-out-alt mr-2"></i>Logout
             </a>
         </div>

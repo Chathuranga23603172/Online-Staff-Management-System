@@ -159,5 +159,34 @@ public static List<UserModel> loginvalidate(String name,String password){
 		}
 		return user;
 	}
+   
+   public static boolean deleteAccount(String id) {
+		
+		int convID = Integer.parseInt(id);
+		
+		try {
+			
+			 
+			//DBConnection
+			con=DBConnection.getConnection();
+			stmt=con.createStatement();
+			String sql = "delete from user where id='"+convID+"'";
+			int rs = stmt.executeUpdate(sql);
+			
+			if(rs>0) {
+				isSuccess = true;
+			}
+			
+			else {
+				isSuccess = false;
+			}
+			
+		}catch(Exception e) {
+			
+			e.printStackTrace();
+			
+		}
+		return isSuccess;
+	}
 	
 }

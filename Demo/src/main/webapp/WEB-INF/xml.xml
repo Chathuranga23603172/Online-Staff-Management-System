@@ -221,4 +221,17 @@
                        <servlet-name>AdminProfileServlet</servlet-name>
                        <url-pattern>/AdminProfileServlet</url-pattern>
         </servlet-mapping>
+                <servlet>
+         
+              <servlet-name>AdminEditeServlet</servlet-name>
+              <servlet-class>UserPackage.AdminEditeServlet</servlet-class>
+              
+        </servlet>
+         
+         
+         <servlet-mapping>
+                       
+                       <servlet-name>AdminEditeServlet</servlet-name>
+                       <url-pattern>/AdminEditeServlet</url-pattern>
+        </servlet-mapping>
          </web-app>

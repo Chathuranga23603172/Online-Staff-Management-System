@@ -133,4 +133,28 @@ public static List<AdminModel> AdminProfile(String Id){
 	   
 	   return admin;
 }
+public static boolean updateProfile(String id,String fullname,String university,String degree,String username,String password) {
+	
+	try {
+		con=DBConnection.getConnection();
+		stmt=con.createStatement();
+		
+		String sql ="update admin set fullname='"+fullname+"',university='"+university+"',degree='"+degree+"',username='"+username+"',password='"+password+"'"
+				+ "where id='"+id+"'" ;
+		
+		int rs = stmt.executeUpdate(sql);
+		
+		if(rs>0) {
+			isSuccess = true;
+		}
+		
+		else {
+			isSuccess = false;
+		}
+		
+	}catch(Exception e) {
+		e.printStackTrace();
+	}
+	return isSuccess;
+}
 }

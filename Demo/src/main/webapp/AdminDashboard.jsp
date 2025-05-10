@@ -35,7 +35,7 @@
       <div class="max-w-4xl mx-auto bg-white p-8 rounded-2xl shadow-lg transition-all">
         <div class="flex items-center justify-between mb-8">
           <div class="flex items-center gap-6">
-            <img src="https://i.pravatar.cc/100?img=12" alt="Admin Avatar" class="w-24 h-24 rounded-full border-4 border-blue-500 shadow-md">
+        
             <div>
               <h2 class="text-3xl font-bold text-blue-800">Welcome, ${Admin.fullname}</h2>
               <p class="text-sm text-gray-500">System Administrator | BlueHorizon College</p>
@@ -82,7 +82,7 @@
 
           <!-- Edit and Delete Buttons -->
           <div class="col-span-1 md:col-span-2 flex justify-end space-x-4 mt-4">
-            <a href="EditAdmin.jsp?id=${Admin.id}" class="px-4 py-2 bg-yellow-500 text-white rounded-lg hover:bg-yellow-600 transition">
+            <a href="AdminEdit.jsp?id=${Admin.id}&fullname=${Admin.fullname}&university=${Admin.university}&degree=${Admin.degree}&username=${Admin.username}&password=${Admin.password}" class="px-4 py-2 bg-yellow-500 text-white rounded-lg hover:bg-yellow-600 transition">
               <i class="fas fa-pen-to-square mr-1"></i>Edit
             </a>
             <form action="DeleteAdminServlet" method="post" onsubmit="return confirm('Are you sure you want to delete this admin?')">

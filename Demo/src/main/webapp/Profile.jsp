@@ -57,7 +57,7 @@
                 </button>
             </form>
 
-            <a href="logout.jsp" 
+            <a href="LogoutServlet" 
                class="px-6 py-2 bg-blue-600 text-white font-medium rounded-full shadow hover:bg-blue-700 transition duration-300 flex items-center">
                 <i class="fas fa-sign-out-alt mr-2"></i>Logout
             </a>

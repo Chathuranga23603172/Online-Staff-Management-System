@@ -156,4 +156,30 @@
                        <servlet-name>AdminUpdateUser</servlet-name>
                        <url-pattern>/AdminUpdateUser</url-pattern>
         </servlet-mapping>
+                                 <servlet>
+         
+              <servlet-name>AdminUserDeleteServlet</servlet-name>
+              <servlet-class>UserPackage.AdminUserDeleteServlet</servlet-class>
+              
+        </servlet>
+         
+         
+         <servlet-mapping>
+                       
+                       <servlet-name>AdminUserDeleteServlet</servlet-name>
+                       <url-pattern>/AdminUserDeleteServlet</url-pattern>
+        </servlet-mapping>
+                                         <servlet>
+         
+              <servlet-name>LogoutServlet</servlet-name>
+              <servlet-class>UserPackage.LogoutServlet</servlet-class>
+              
+        </servlet>
+         
+         
+         <servlet-mapping>
+                       
+                       <servlet-name>LogoutServlet</servlet-name>
+                       <url-pattern>/LogoutServlet</url-pattern>
+        </servlet-mapping>
          </web-app>

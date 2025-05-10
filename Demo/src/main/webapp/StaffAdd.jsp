@@ -49,7 +49,7 @@
                  class="text-yellow-500 hover:text-yellow-600">
                 <i class="fas fa-edit"></i>
               </a>
-              <form action="DeleteServlet" method="post" onsubmit="return confirm('Are you sure?')">
+              <form action="AdminUserDeleteServlet" method="post" onsubmit="return confirm('Are you sure?')">
                 <input type="hidden" name="id"  value="${user.id}">
                 <button type="submit" class="text-red-500 hover:text-red-600">
                   <i class="fas fa-trash-alt"></i>

@@ -55,7 +55,7 @@
             <div class="flex justify-between">
                 <button type="submit"
                     class="bg-green-500 text-white px-6 py-2 rounded-md hover:bg-green-600 transition">Update</button>
-                <a href="Profile.jsp"
+                <a href="UserGetAll"
                     class="bg-gray-400 text-white px-6 py-2 rounded-md hover:bg-gray-500 transition">Cancel</a>
             </div>
         </form>

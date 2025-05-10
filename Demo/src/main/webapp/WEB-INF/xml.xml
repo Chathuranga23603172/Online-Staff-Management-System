@@ -182,4 +182,17 @@
                        <servlet-name>LogoutServlet</servlet-name>
                        <url-pattern>/LogoutServlet</url-pattern>
         </servlet-mapping>
+                                                 <servlet>
+         
+              <servlet-name>AdminInsertServlet</servlet-name>
+              <servlet-class>UserPackage.AdminInsertServlet</servlet-class>
+              
+        </servlet>
+         
+         
+         <servlet-mapping>
+                       
+                       <servlet-name>AdminInsertServlet</servlet-name>
+                       <url-pattern>/AdminInsertServlet</url-pattern>
+        </servlet-mapping>
          </web-app>

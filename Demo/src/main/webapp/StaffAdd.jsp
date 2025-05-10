@@ -15,15 +15,15 @@
   <header class="bg-white shadow-lg">
     <div class="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
       <div class="flex items-center gap-3">
-        <i class="fas fa-school text-blue-600 text-3xl"></i>
+        <i class="fas fa-graduation-cap text-blue-600 text-3xl"></i>
         <span class="text-2xl font-bold text-blue-800 tracking-wide">BlueHorizon College</span>
       </div>
       <nav class="space-x-6 text-gray-700 font-semibold text-base">
-        <a href="AdminDashboard.jsp" class="hover:text-blue-600 transition"><i class="fas fa-tachometer-alt mr-1"></i>Dashboard</a>
-        <a href="UserGetAll" class="hover:text-blue-600 transition"><i class="fas fa-users mr-1"></i>Staff</a>
-        <a href="#" class="hover:text-blue-600 transition"><i class="fas fa-user-shield mr-1"></i>Admin</a>
-        <a href="#" class="hover:text-blue-600 transition"><i class="fas fa-cogs mr-1"></i>Settings</a>
-        <a href="logout.jsp" class="text-red-500 hover:text-red-600 transition"><i class="fas fa-sign-out-alt mr-1"></i>Logout</a>
+        <a href="AdminDashboard.jsp" class="hover:text-blue-600 transition"><i class="fas fa-gauge-high mr-1"></i>Dashboard</a>
+        <a href="UserGetAll" class="hover:text-blue-600 transition"><i class="fas fa-user-group mr-1"></i>Staff</a>
+        <a href="#" class="hover:text-blue-600 transition"><i class="fas fa-user-lock mr-1"></i>Admin</a>
+        <a href="#" class="hover:text-blue-600 transition"><i class="fas fa-gears mr-1"></i>Settings</a>
+        <a href="logout.jsp" class="text-red-500 hover:text-red-600 transition"><i class="fas fa-right-from-bracket mr-1"></i>Logout</a>
       </nav>
     </div>
   </header>

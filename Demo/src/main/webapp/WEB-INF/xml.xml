@@ -234,4 +234,17 @@
                        <servlet-name>AdminEditeServlet</servlet-name>
                        <url-pattern>/AdminEditeServlet</url-pattern>
         </servlet-mapping>
+                        <servlet>
+         
+              <servlet-name>AdminDeleteServlet</servlet-name>
+              <servlet-class>UserPackage.AdminDeleteServlet</servlet-class>
+              
+        </servlet>
+         
+         
+         <servlet-mapping>
+                       
+                       <servlet-name>AdminDeleteServlet</servlet-name>
+                       <url-pattern>/AdminDeleteServlet</url-pattern>
+        </servlet-mapping>
          </web-app>

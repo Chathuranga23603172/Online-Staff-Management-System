@@ -28,7 +28,7 @@ public class AdminInsertServlet extends HttpServlet {
 		
 		if(isTrue == true) {
 			String alertMessage = "Data insert Successful.."; 
-			response.getWriter().println("<script> alert('"+alertMessage+"'); window.location.href='done.jsp'</script>");
+			response.getWriter().println("<script> alert('"+alertMessage+"'); window.location.href='AdminLogin.jsp'</script>");
 			
 		}
 		else {

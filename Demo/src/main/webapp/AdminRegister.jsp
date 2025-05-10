@@ -68,7 +68,7 @@
         </form>
 
         <p class="text-center text-sm text-gray-500 mt-6">
-            Already have an account? <a href="adminLogin.jsp" class="text-blue-600 hover:underline">Login</a>
+            Already have an account? <a href="AdminLogin.jsp" class="text-blue-600 hover:underline">Login</a>
         </p>
     </div>
 

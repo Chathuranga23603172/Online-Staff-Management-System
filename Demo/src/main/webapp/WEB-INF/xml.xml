@@ -195,4 +195,30 @@
                        <servlet-name>AdminInsertServlet</servlet-name>
                        <url-pattern>/AdminInsertServlet</url-pattern>
         </servlet-mapping>
+                                                         <servlet>
+         
+              <servlet-name>AdminLoginServlet</servlet-name>
+              <servlet-class>UserPackage.AdminLoginServlet</servlet-class>
+              
+        </servlet>
+         
+         
+         <servlet-mapping>
+                       
+                       <servlet-name>AdminLoginServlet</servlet-name>
+                       <url-pattern>/AdminLoginServlet</url-pattern>
+        </servlet-mapping>
+        <servlet>
+         
+              <servlet-name>AdminProfileServlet</servlet-name>
+              <servlet-class>UserPackage.AdminProfileServlet</servlet-class>
+              
+        </servlet>
+         
+         
+         <servlet-mapping>
+                       
+                       <servlet-name>AdminProfileServlet</servlet-name>
+                       <url-pattern>/AdminProfileServlet</url-pattern>
+        </servlet-mapping>
          </web-app>

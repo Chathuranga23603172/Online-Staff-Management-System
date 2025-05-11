@@ -42,23 +42,26 @@
         <table class="w-full table-auto divide-y divide-gray-200 text-sm">
           <thead class="bg-green-100 text-green-800 uppercase text-xs">
             <tr>
-              <th class="px-6 py-4 text-left w-1/6">Dept ID</th>
+              <th class="px-6 py-4 text-left w-1/6">Department ID</th>
+              <th class="px-6 py-4 text-left w-1/3">Contact No<th>
               <th class="px-6 py-4 text-left w-1/3">Department Name</th>
-              <th class="px-6 py-4 text-left w-1/3">Head of Department</th>
+              <th class="px-6 py-4 text-left w-1/3">Head Of Department</th>
               <th class="px-6 py-4 text-left w-1/6">Actions</th>
             </tr>
           </thead>
           <tbody class="bg-white divide-y divide-gray-100">
             <tr class="hover:bg-green-50 transition">
-              <td class="px-6 py-4 font-medium">D001</td>
-              <td class="px-6 py-4">Computer Science</td>
-              <td class="px-6 py-4">Prof. Alan Turing</td>
+              <td class="px-6 py-4 font-medium">${faculty.id}</td>
+              <td class="px-6 py-4">${faculty.subject}</td>
+              <td class="px-6 py-4">${faculty.facultyname}</td>
+              <td class="px-6 py-4">${faculty.name}</td>
+              
               <td class="px-6 py-4 flex gap-4">
-                <a href="EditDepartment.jsp?id=D001" class="text-yellow-500 hover:text-yellow-600 transition">
+                <a href="DepartmentUpdate.jsp?id=${faculty.id}&name=${faculty.subject}&subject=${faculty.facultyname}&facultyname=${faculty.name}" class="text-yellow-500 hover:text-yellow-600 transition">
                   <i class="fas fa-pen-to-square"></i>
                 </a>
-                <form action="DeleteDepartmentServlet" method="post" onsubmit="return confirm('Are you sure?')">
-                  <input type="hidden" name="id" value="D001">
+                <form action="DepartmentDeleteServlet" method="post" onsubmit="return confirm('Are you sure?')">
+                  <input type="hidden" name="id" value="${faculty.id}"/>
                   <button type="submit" class="text-red-500 hover:text-red-600 transition">
                     <i class="fas fa-trash-can"></i>
                   </button>

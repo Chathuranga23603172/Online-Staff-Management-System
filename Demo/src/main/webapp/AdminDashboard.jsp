@@ -20,9 +20,10 @@
       <nav class="space-x-6 text-gray-700 font-semibold text-base">
         <a href="#" class="hover:text-blue-600 transition"><i class="fas fa-gauge-high mr-1"></i>Dashboard</a>
         <a href="UserGetAll" class="hover:text-blue-600 transition"><i class="fas fa-user-group mr-1"></i>Staff</a>
-        <a href="#" class="hover:text-blue-600 transition"><i class="fas fa-user-lock mr-1"></i>Admin</a>
+        <a href="#" class="hover:text-blue-600 transition"><i class="fas fa-building mr-1"></i>Departments</a>
+
         <a href="#" class="hover:text-blue-600 transition"><i class="fas fa-gears mr-1"></i>Settings</a>
-        <a href="logout.jsp" class="text-red-500 hover:text-red-600 transition"><i class="fas fa-right-from-bracket mr-1"></i>Logout</a>
+        <a href="AdminLogoutServlet" class="text-red-500 hover:text-red-600 transition"><i class="fas fa-right-from-bracket mr-1"></i>Logout</a>
       </nav>
     </div>
   </header>

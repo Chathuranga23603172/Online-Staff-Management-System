@@ -50,7 +50,7 @@
           </thead>
           <tbody class="bg-white divide-y divide-gray-100">
             <tr class="hover:bg-green-50 transition">
-              <td class="px-6 py-4 font-medium">D001</td>
+              <td class="px-6 py-4 font-medium"></td>
               <td class="px-6 py-4">Computer Science</td>
               <td class="px-6 py-4">Prof. Alan Turing</td>
               <td class="px-6 py-4 flex gap-4">

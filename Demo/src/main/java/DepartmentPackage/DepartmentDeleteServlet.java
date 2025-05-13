@@ -27,7 +27,7 @@ public class DepartmentDeleteServlet extends HttpServlet {
 		isTrue = FacultyController.deletedata(id);
 		if(isTrue == true) {
 			String alertMessage = "Data Deleted Successfully";
-			response.getWriter().println("<script>alert('"+alertMessage+"');"+"window.location.href='GetAllServlet';</script>");
+			response.getWriter().println("<script>alert('"+alertMessage+"');"+"window.location.href='DepartmentGetAll';</script>");
 			}
 			else {
 				List<FacultyModel> facultyDetails = FacultyController.getById(id);

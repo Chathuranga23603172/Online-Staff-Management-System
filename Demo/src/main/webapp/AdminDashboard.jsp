@@ -1,3 +1,4 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <!DOCTYPE html>
 <html lang="en" x-data="{ open: false }">
@@ -98,53 +99,7 @@
     </main>
 
     <!-- Department Management Section -->
-    <section class="max-w-6xl mx-auto px-6 py-10">
-      <div class="bg-white shadow-xl rounded-2xl p-6">
-        <div class="flex items-center justify-between mb-8">
-          <h2 class="text-2xl font-bold text-blue-800 flex items-center gap-2">
-            <i class="fas fa-landmark text-blue-600"></i> Department Management
-          </h2>
-          <a href="AddDepartment.jsp" 
-             class="bg-green-600 hover:bg-green-700 text-white px-5 py-2 rounded-full shadow-md flex items-center gap-2 transition">
-            <i class="fas fa-circle-plus"></i> Add Department
-          </a>
-        </div>
-
-        <div class="overflow-x-auto">
-          <table class="min-w-full divide-y divide-gray-200 text-sm">
-            <thead class="bg-green-100 text-green-800 uppercase text-xs">
-              <tr>
-                <th class="px-4 py-3 text-left">Dept ID</th>
-                <th class="px-4 py-3 text-left">Department Name</th>
-                <th class="px-4 py-3 text-left">Head of Department</th>
-                <th class="px-4 py-3 text-left">Actions</th>
-              </tr>
-            </thead>
-            <tbody class="bg-white divide-y divide-gray-100">
-              <tr class="hover:bg-green-50 transition">
-                <td class="px-4 py-3 font-medium">D001</td>
-                <td class="px-4 py-3">Computer Science</td>
-                <td class="px-4 py-3">Prof. Alan Turing</td>
-                <td class="px-4 py-3 flex gap-4">
-                  <a href="EditDepartment.jsp?id=D001" class="text-yellow-500 hover:text-yellow-600 transition">
-                    <i class="fas fa-pen-to-square"></i>
-                  </a>
-                  <form action="DeleteDepartmentServlet" method="post" onsubmit="return confirm('Are you sure?')">
-                    <input type="hidden" name="id" value="D001">
-                    <button type="submit" class="text-red-500 hover:text-red-600 transition">
-                      <i class="fas fa-trash-can"></i>
-                    </button>
-                  </form>
-                </td>
-              </tr>
-              <!-- Add more rows dynamically -->
-            </tbody>
-          </table>
-        </div>
-      </div>
-    </section>
-  </div>
-
+   </div>
   <!-- Footer -->
   <footer class="bg-white border-t mt-auto">
     <div class="max-w-7xl mx-auto px-6 py-8 flex flex-col md:flex-row justify-between items-center text-sm text-gray-500">

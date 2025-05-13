@@ -38,26 +38,26 @@
       <form action="InsertServlet" method="post" class="grid grid-cols-1 md:grid-cols-2 gap-6">
         <!-- Contact Number -->
         <div>
-          <label class="block text-sm font-medium text-gray-700">Contact Number</label>
-          <input type="tel" name="subject" required
-                 class="w-full mt-1 rounded-md border-gray-300 shadow-sm focus:ring-blue-500 focus:border-blue-500"
-                 placeholder="+94123456789">
+          <label class="block text-sm font-medium text-gray-700">Head of Department</label>
+          <input type="tel" name="name" required
+                 class="w-full mt-1 rounded-md border-gray-300 shadow-sm focus:ring-blue-500 focus:border-blue-500">
+                 
         </div>
 
         <!-- Department Name -->
         <div>
-          <label class="block text-sm font-medium text-gray-700">Department Name</label>
-          <input type="text" name="facultyname" required
-                 class="w-full mt-1 rounded-md border-gray-300 shadow-sm focus:ring-blue-500 focus:border-blue-500"
-                 placeholder="Information Technology">
+          <label class="block text-sm font-medium text-gray-700">Contact-Number</label>
+          <input type="text" name="subject" required
+                 class="w-full mt-1 rounded-md border-gray-300 shadow-sm focus:ring-blue-500 focus:border-blue-500">
+                
         </div>
 
         <!-- Head of Department -->
         <div class="md:col-span-2">
-          <label class="block text-sm font-medium text-gray-700">Head of Department</label>
-          <input type="text" name="name" required
-                 class="w-full mt-1 rounded-md border-gray-300 shadow-sm focus:ring-blue-500 focus:border-blue-500"
-                 placeholder="Mr. John Doe">
+          <label class="block text-sm font-medium text-gray-700">Department Name</label>
+          <input type="text" name="facultyname" required
+                 class="w-full mt-1 rounded-md border-gray-300 shadow-sm focus:ring-blue-500 focus:border-blue-500">
+                
         </div>
 
         <div class="md:col-span-2 flex justify-end">

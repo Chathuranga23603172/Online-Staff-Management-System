@@ -10,11 +10,10 @@
 <body class="bg-gradient-to-br from-blue-100 to-blue-300 min-h-screen py-10">
 
 <%
-       String id = request.getParameter("id");
-       String name = request.getParameter("name");
-       String gmail = request.getParameter("gmail");
-       String password = request.getParameter("password");
-       String phone = request.getParameter("phone");
+    String id = request.getParameter("id");
+    String name = request.getParameter("name");
+    String subject = request.getParameter("subject");
+    String facultyname = request.getParameter("facultyname");
        
 
 %>
@@ -22,33 +21,25 @@
     <div class="max-w-xl mx-auto bg-white rounded-xl shadow-lg p-8">
         <h2 class="text-3xl font-bold text-blue-700 text-center mb-8">Edit Profile</h2>
 
-        <form action="UpdateProfileServlet" method="post" class="space-y-6">
-        <div>
-                <label class="block text-gray-700 font-semibold mb-2">ID</label>
-                <input type="text" name="id" value="<%=id%>" readonly
-                    class="w-full px-4 py-2 border rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500">
-            </div>
+        <form action="DepartmentUpdateServlet" method="post" class="space-y-6">
+               
+                <input type="hidden" name="id" value="<%=id%>" readonly/>
+                
             <div>
-                <label class="block text-gray-700 font-semibold mb-2">Full Name</label>
+                <label class="block text-gray-700 font-semibold mb-2">Head of Department</label>
                 <input type="text" name="name" value="<%=name%>" required
                     class="w-full px-4 py-2 border rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500">
             </div>
 
             <div>
-                <label class="block text-gray-700 font-semibold mb-2">Gmail</label>
-                <input type="email" name="gmail" value="<%=gmail%>" required
+                <label class="block text-gray-700 font-semibold mb-2">Contact-Number</label>
+                <input type="tel" name="subject" value="<%=subject%>" required
                     class="w-full px-4 py-2 border rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500">
             </div>
 
             <div>
-                <label class="block text-gray-700 font-semibold mb-2">Password</label>
-                <input type="password" name="password" value="<%=password%>" required
-                    class="w-full px-4 py-2 border rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500">
-            </div>
-
-            <div>
-                <label class="block text-gray-700 font-semibold mb-2">Phone</label>
-                <input type="text" name="phone" value="<%=phone%>" required
+                <label class="block text-gray-700 font-semibold mb-2">Department Name</label>
+                <input type="text" name="facultyname" value="<%=facultyname%>" required
                     class="w-full px-4 py-2 border rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500">
             </div>
 

@@ -13,7 +13,7 @@ public class FacultyController {
 	private static Statement stmt = null;
 	private static ResultSet rs = null;
 	
-	public static boolean insertdata(String subject, String facultyname, String name) {
+	public static boolean insertdata(String name, String contact, String facultyname) {
 		
 		boolean isSuccess = false;
 		try {
@@ -22,7 +22,7 @@ public class FacultyController {
 			stmt=con.createStatement();
 			
 			//SQL Query
-			String sql = "INSERT INTO faculty (subject, facultyname, name) VALUES ('"+subject+"','"+facultyname+"','"+name+"')";
+			String sql = "INSERT INTO faculty (name, contact, facultyname ) VALUES ( '"+name+"','"+contact+"','"+facultyname+"',)";
 			int rs = stmt.executeUpdate(sql);
 			if(rs>0) {
 				isSuccess = true;
@@ -52,12 +52,13 @@ public class FacultyController {
 			
 			while(rs.next()) {
 				int id = rs.getInt(1);
-                String subject = rs.getString(2);  
-				String facultyname = rs.getString(3);
-				String name = rs.getString(4);
+				String name = rs.getString(2);
+                String contact = rs.getString(3);  
+				String facultyname = rs.getString(4);
 				
 				
-				FacultyModel fk = new FacultyModel(id,subject,facultyname,name);
+				
+				FacultyModel fk = new FacultyModel(id,name,contact,facultyname);
 				faculty.add(fk);
 			}
 			
@@ -84,11 +85,12 @@ public class FacultyController {
 				
 				while(rs.next()) {
 					int id = rs.getInt(1);
-					String subject = rs.getString(2);  
-				    String facultyname = rs.getString(3);
-				    String name = rs.getString(4);
+					String name = rs.getString(2);
+					String contact = rs.getString(3);  
+				    String facultyname = rs.getString(4);
+				    
 					
-					FacultyModel fk = new FacultyModel(id,subject,facultyname,name);
+					FacultyModel fk = new FacultyModel(id,name,contact,facultyname);
 					facultys.add(fk);
 				}
 				
@@ -99,12 +101,12 @@ public class FacultyController {
 			return facultys;
 			
 		}
-		public static boolean updatedata(String id,String subject,String facultyname,String name) {
+		public static boolean updatedata(String id,String name,String contact,String facultyname) {
 				try {
 					con=DBConnection.getConnection();
 					stmt=con.createStatement();
 					
-					String sql ="update faculty set  subject='"+subject+"',facultyname='"+facultyname+"',name='"+name+"' where id='"+id+"'";        
+					String sql ="update faculty set  name='"+name+"', contact='"+contact+"'facultyname='"+facultyname+"', where id='"+id+"'";        
 							
 					int rs = stmt.executeUpdate(sql);
 					

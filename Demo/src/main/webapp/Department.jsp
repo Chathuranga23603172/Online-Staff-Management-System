@@ -28,7 +28,7 @@
     <main class="max-w-7xl mx-auto px-6 py-8">
         <div class="flex justify-between items-center mb-6">
             <h2 class="text-3xl font-bold text-gray-800">Department List</h2>
-            <a href="addDepartment.jsp" class="bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700 shadow">
+            <a href="AddDepartment.jsp" class="bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700 shadow">
                 <i class="fas fa-plus mr-2"></i>Add Department
             </a>
         </div>
@@ -40,24 +40,23 @@
                     <tr>
                         <th class="px-6 py-4">ID</th>
                         <th class="px-6 py-4">Department Name</th>
-                        <th class="px-6 py-4">Head of Department</th>
                         <th class="px-6 py-4">Contact Number</th>
+                        <th class="px-6 py-4">Head of Department</th>
                         <th class="px-6 py-4">Actions</th>
                     </tr>
                 </thead>
-                <tbody class="bg-white divide-y divide-gray-200">
-                    <c:forEach var="dept" items="${departments}">
+                <tbody class="bg-white divide-y divide-gray-200"> 
+                    <c:forEach var="faculty" items="${allfaculty}">
                         <tr class="hover:bg-gray-50 transition">
-                            <td class="px-6 py-4 font-medium">${dept.id}</td>
-                            <td class="px-6 py-4">${dept.name}</td>
-                            <td class="px-6 py-4">${dept.head}</td>
-                            <td class="px-6 py-4">${dept.contact}</td>
-                            <td class="px-6 py-4">${dept.faculty}</td>
+                            <td class="px-6 py-4 font-medium">${faculty.id}</td>
+                            <td class="px-6 py-4">${faculty.name}</td>
+                            <td class="px-6 py-4">${faculty.contact}</td>
+                            <td class="px-6 py-4">${faculty.facultyname}</td>
                             <td class="px-6 py-4 space-x-3">
-                                <a href="editDepartment.jsp?id=${dept.id}" class="text-green-600 hover:underline">
+                                <a href="UpdateDepartment.jsp?id=${faculty.id}" class="text-green-600 hover:underline">
                                     <i class="fas fa-edit"></i> Edit
                                 </a>
-                                <a href="deleteDepartment?id=${dept.id}" class="text-red-600 hover:underline" onclick="return confirm('Are you sure?')">
+                                <a href="DepartmentDeleteServlet?id=${faculty.id}" class="text-red-600 hover:underline" onclick="return confirm('Are you sure?')">
                                     <i class="fas fa-trash"></i> Delete
                                 </a>
                             </td>

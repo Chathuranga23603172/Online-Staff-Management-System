@@ -36,25 +36,24 @@
       </h2>
 
       <form action="InsertServlet" method="post" class="grid grid-cols-1 md:grid-cols-2 gap-6">
-        <!-- Contact Number -->
+
+        <div class="md:col-span-2">
+          <label class="block text-sm font-medium text-gray-700">Department Name</label>
+          <input type="text" name="name" required
+                 class="w-full mt-1 rounded-md border-gray-300 shadow-sm focus:ring-blue-500 focus:border-blue-500">
+                
+        </div>
+        
         <div>
-          <label class="block text-sm font-medium text-gray-700">Head of Department</label>
-          <input type="tel" name="name" required
+          <label class="block text-sm font-medium text-gray-700">contact</label>
+          <input type="tel" name="contact" required
                  class="w-full mt-1 rounded-md border-gray-300 shadow-sm focus:ring-blue-500 focus:border-blue-500">
                  
         </div>
 
-        <!-- Department Name -->
+        
         <div>
-          <label class="block text-sm font-medium text-gray-700">Contact-Number</label>
-          <input type="text" name="subject" required
-                 class="w-full mt-1 rounded-md border-gray-300 shadow-sm focus:ring-blue-500 focus:border-blue-500">
-                
-        </div>
-
-        <!-- Head of Department -->
-        <div class="md:col-span-2">
-          <label class="block text-sm font-medium text-gray-700">Department Name</label>
+          <label class="block text-sm font-medium text-gray-700">Head of Department</label>
           <input type="text" name="facultyname" required
                  class="w-full mt-1 rounded-md border-gray-300 shadow-sm focus:ring-blue-500 focus:border-blue-500">
                 

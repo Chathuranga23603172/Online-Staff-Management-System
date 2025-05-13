@@ -24,13 +24,14 @@ public class DepartmentUpdateServlet extends HttpServlet {
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		
 		String id = request.getParameter("id");
-		String subject = request.getParameter("subject");
-		String facultyname = request.getParameter("facultyname");
 		String name = request.getParameter("name");
+		String contact = request.getParameter("contact");
+		String facultyname = request.getParameter("facultyname");
+		
 		
 		
 		boolean isTrue;
-		isTrue = FacultyController.updatedata(id, name, subject, facultyname);
+		isTrue = FacultyController.updatedata(id, name, contact, facultyname);
 		
 		if(isTrue == true) {
 			List<FacultyModel> facultydetails = FacultyController.getById(id);

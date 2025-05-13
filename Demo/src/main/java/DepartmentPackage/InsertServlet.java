@@ -17,13 +17,14 @@ public class InsertServlet extends HttpServlet {
        
 
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		String subject = request.getParameter("subject");
-		String facultyname = request.getParameter("facultyname");
 		String name = request.getParameter("name");
+		String contact = request.getParameter("contact");
+		String facultyname = request.getParameter("facultyname");
+		
 		
 	boolean isTrue;
 	
-	isTrue = FacultyController.insertdata(subject, facultyname, name); 
+	isTrue = FacultyController.insertdata(name, contact, facultyname); 
 	
 	if(isTrue == true) {
 		String alertMessage = "Data Insert Successful";

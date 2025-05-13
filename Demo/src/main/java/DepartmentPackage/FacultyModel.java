@@ -3,18 +3,16 @@ package DepartmentPackage;
 public class FacultyModel {
 
 	private int id;
-    private String subject;
-	private String facultyname;
 	private String name;
+    private String contact;
+	private String facultyname;
 	
-	
-	public FacultyModel(int id, String subject, String facultyname, String name) {
+	public FacultyModel(int id, String name, String contact, String facultyname) {
 		super(); 
 		this.id = id;
-        this.subject = subject;
-		this.facultyname = facultyname;
 		this.name = name;
-		
+		this.contact = contact;
+		this.facultyname = facultyname;
 	}
 
 	public int getId() {
@@ -33,12 +31,12 @@ public class FacultyModel {
 		this.name = name;
 	}
 
-	public String getSubject() {
-		return subject;
+	public String getContact() {
+		return contact;
 	}
 
-	public void setSubject(String subject) {
-		this.subject = subject;
+	public void setContact(String contact) {
+		this.contact = contact;
 	}
 
 	public String getFacultyname() {
@@ -48,7 +46,7 @@ public class FacultyModel {
 	public void setFacultyname(String facultyname) {
 		this.facultyname = facultyname;
 	}
-	
+
 	
 
 }

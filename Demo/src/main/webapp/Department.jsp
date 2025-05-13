@@ -46,9 +46,9 @@
           <thead class="bg-blue-100 text-blue-800 text-sm uppercase">
             <tr>
               <th class="px-6 py-4">ID</th>
-              <th class="px-6 py-4">Head Of Department</th>
-              <th class="px-6 py-4">Contact-Number</th>
               <th class="px-6 py-4">Department Name</th>
+              <th class="px-6 py-4">Head of Department</th>
+              <th class="px-6 py-4">Contact-Number</th>
               <th class="px-6 py-4">Actions</th>
             </tr>
           </thead>

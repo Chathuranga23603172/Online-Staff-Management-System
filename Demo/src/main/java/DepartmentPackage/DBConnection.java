@@ -4,7 +4,7 @@ import java.sql.Connection;
 import java.sql.DriverManager;
 
 public class DBConnection {
-	private static String url ="jdbc:mysql://127.0.0.1:3306/demo";
+	private static String url ="jdbc:mysql://127.0.0.1:3306/section";
 	private static String user ="root";
 	private static String pass ="root";
 	private static Connection con;

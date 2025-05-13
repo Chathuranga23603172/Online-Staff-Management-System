@@ -247,4 +247,63 @@
                        <servlet-name>AdminDeleteServlet</servlet-name>
                        <url-pattern>/AdminDeleteServlet</url-pattern>
         </servlet-mapping>
+        
+                                <servlet>
+         
+              <servlet-name>InsertServlet</servlet-name>
+              <servlet-class>DepartmentPackage.InsertServlet</servlet-class>
+              
+        </servlet>
+         
+         
+         <servlet-mapping>
+                       
+                       <servlet-name>InsertServlet</servlet-name>
+                       <url-pattern>/InsertServlet</url-pattern>
+        </servlet-mapping>
+        
+                                        <servlet>
+         
+              <servlet-name>DepartmentUpdateServlet</servlet-name>
+              <servlet-class>DepartmentPackage.DepartmentUpdateServlet</servlet-class>
+              
+        </servlet>
+         
+         
+         <servlet-mapping>
+                       
+                       <servlet-name>DepartmentUpdateServlet</servlet-name>
+                       <url-pattern>/DepartmentUpdateServlet</url-pattern>
+        </servlet-mapping>
+        
+                                                <servlet>
+         
+              <servlet-name>DepartmentGetAll</servlet-name>
+              <servlet-class>DepartmentPackage.DepartmentGetAll</servlet-class>
+              
+        </servlet>
+         
+         
+         <servlet-mapping>
+                       
+                       <servlet-name>DepartmentGetAll</servlet-name>
+                       <url-pattern>/DepartmentGetAll</url-pattern>
+        </servlet-mapping>
+        
+                                                        <servlet>
+         
+              <servlet-name>DepartmentDeleteServlet</servlet-name>
+              <servlet-class>DepartmentPackage.DepartmentDeleteServlet</servlet-class>
+              
+        </servlet>
+         
+         
+         <servlet-mapping>
+                       
+                       <servlet-name>DepartmentDeleteServlet</servlet-name>
+                       <url-pattern>/DepartmentDeleteServlet</url-pattern>
+        </servlet-mapping>
+        
+        
+        
          </web-app>

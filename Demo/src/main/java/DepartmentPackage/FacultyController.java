@@ -22,7 +22,7 @@ public class FacultyController {
 			stmt=con.createStatement();
 			
 			//SQL Query
-			String sql = "INSERT INTO faculty (name, contact, facultyname ) VALUES ( '"+name+"','"+contact+"','"+facultyname+"',)";
+			String sql = "INSERT INTO faculty (name, contact, facultyname ) VALUES ( '"+name+"','"+contact+"','"+facultyname+"')";
 			int rs = stmt.executeUpdate(sql);
 			if(rs>0) {
 				isSuccess = true;
@@ -106,7 +106,7 @@ public class FacultyController {
 					con=DBConnection.getConnection();
 					stmt=con.createStatement();
 					
-					String sql ="update faculty set  name='"+name+"', contact='"+contact+"'facultyname='"+facultyname+"', where id='"+id+"'";        
+					String sql ="update faculty set  name='"+name+"', contact='"+contact+"',facultyname='"+facultyname+"' where id='"+id+"'";        
 							
 					int rs = stmt.executeUpdate(sql);
 					

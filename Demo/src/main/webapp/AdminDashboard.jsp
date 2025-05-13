@@ -8,11 +8,25 @@
   <script src="https://cdn.tailwindcss.com"></script>
   <script defer src="https://unpkg.com/alpinejs@3.x.x/dist/cdn.min.js"></script>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <style>
+  body {
+    background-image: url('assets/dashboard.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center;
+  }
+  .bg-overlay {
+    background: rgba(255, 255, 255, 0.8);
+    backdrop-filter: blur(4px);
+  }
+</style>
+
 </head>
-<body class="flex flex-col min-h-screen bg-gray-100 text-gray-800">
+<body class="flex flex-col min-h-screen text-gray-800">
 
   <!-- Navigation Bar -->
-  <header class="bg-white shadow-lg">
+  <header class="bg-white shadow-lg bg-opacity-90">
     <div class="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
       <div class="flex items-center gap-3">
         <i class="fas fa-graduation-cap text-blue-600 text-3xl"></i>
@@ -22,8 +36,7 @@
         <a href="#" class="hover:text-blue-600 transition"><i class="fas fa-gauge-high mr-1"></i>Dashboard</a>
         <a href="UserGetAll" class="hover:text-blue-600 transition"><i class="fas fa-user-group mr-1"></i>Staff</a>
         <a href="DepartmentGetAll" class="hover:text-blue-600 transition"><i class="fas fa-building mr-1"></i>Departments</a>
-
-        <a href="#" class="hover:text-blue-600 transition"><i class="fas fa-gears mr-1"></i>Settings</a>
+        <a href="#" class="hover:text-blue-600 transition"><i class="fa-solid fa-envelope-open-text mr-1"></i>Leave Requests</a>
         <a href="AdminLogoutServlet" class="text-red-500 hover:text-red-600 transition"><i class="fas fa-right-from-bracket mr-1"></i>Logout</a>
       </nav>
     </div>
@@ -34,13 +47,12 @@
 
     <!-- Admin Profile Overview -->
     <main class="py-10 px-6">
-      <div class="max-w-4xl mx-auto bg-white p-8 rounded-2xl shadow-lg transition-all">
+      <div class="max-w-4xl mx-auto bg-white bg-overlay p-8 rounded-2xl shadow-xl transition-all">
         <div class="flex items-center justify-between mb-8">
           <div class="flex items-center gap-6">
-        
             <div>
               <h2 class="text-3xl font-bold text-blue-800">Welcome, ${Admin.fullname}</h2>
-              <p class="text-sm text-gray-500">System Administrator | BlueHorizon College</p>
+              <p class="text-sm text-gray-600">System Administrator | BlueHorizon College</p>
             </div>
           </div>
           <button @click="open = !open" class="text-blue-700 hover:text-blue-900 text-lg font-semibold transition">
@@ -98,11 +110,11 @@
       </div>
     </main>
 
-    <!-- Department Management Section -->
-   </div>
+  </div>
+
   <!-- Footer -->
-  <footer class="bg-white border-t mt-auto">
-    <div class="max-w-7xl mx-auto px-6 py-8 flex flex-col md:flex-row justify-between items-center text-sm text-gray-500">
+  <footer class="bg-white bg-opacity-90 border-t mt-auto">
+    <div class="max-w-7xl mx-auto px-6 py-8 flex flex-col md:flex-row justify-between items-center text-sm text-gray-600">
       <div class="flex items-center gap-2 mb-4 md:mb-0">
         <i class="fas fa-shield-halved text-blue-600 text-lg"></i>
         <span>&copy; 2025 BlueHorizon College. All rights reserved.</span>

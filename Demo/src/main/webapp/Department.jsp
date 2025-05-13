@@ -20,17 +20,19 @@
         </div>
         <nav class="space-x-6 text-gray-700 font-medium">
             <a href="AdminDashboard.jsp" class="hover:text-blue-600 transition">
-                <i class="fa-solid fa-chart-line mr-1"></i>Dashboard
+                <i class="fas fa-gauge-high mr-1"></i>Dashboard
             </a>
             <a href="UserGetAll" class="hover:text-blue-600 transition">
                 <i class="fa-solid fa-users mr-1"></i>Staff
             </a>
-            <a href="#" class="text-blue-600 font-semibold">
+            <a href="DepartmentGetAll" class="text-blue-600 font-semibold">
                 <i class="fa-solid fa-building-columns mr-1"></i>Departments
             </a>
-            <a href="#" class="hover:text-blue-600 transition">
-                <i class="fa-solid fa-gear mr-1"></i>Settings
-            </a>
+           <a href="#" class="hover:text-blue-600 transition">
+    <i class="fa-solid fa-calendar-check mr-1"></i>Leave Requests
+         </a>
+
+           
             <a href="DepLogout" class="text-red-500 hover:text-red-600 transition">
                 <i class="fa-solid fa-arrow-right-from-bracket mr-1"></i>Logout
             </a>

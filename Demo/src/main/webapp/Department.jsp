@@ -12,27 +12,27 @@
 <body class="bg-gray-100 text-gray-800 min-h-screen flex flex-col">
 
 <!-- Header -->
-<header class="bg-white shadow">
+<header class="bg-white shadow-md">
     <div class="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
         <div class="flex items-center gap-3">
-            <i class="fas fa-school text-blue-600 text-3xl"></i>
-            <span class="text-2xl font-bold text-blue-800 tracking-wide">BlueHorizon College</span>
+            <i class="fa-solid fa-graduation-cap text-blue-600 text-3xl"></i>
+            <span class="text-2xl font-bold text-blue-800">BlueHorizon College</span>
         </div>
-        <nav class="space-x-6 text-gray-700 font-semibold text-base">
+        <nav class="space-x-6 text-gray-700 font-medium">
             <a href="AdminDashboard.jsp" class="hover:text-blue-600 transition">
-                <i class="fas fa-chart-line mr-1"></i>Dashboard
+                <i class="fa-solid fa-chart-line mr-1"></i>Dashboard
             </a>
             <a href="UserGetAll" class="hover:text-blue-600 transition">
-                <i class="fas fa-users mr-1"></i>Staff
+                <i class="fa-solid fa-users mr-1"></i>Staff
             </a>
-            <a href="#" class="text-blue-600 font-bold">
-                <i class="fas fa-building-columns mr-1"></i>Departments
+            <a href="#" class="text-blue-600 font-semibold">
+                <i class="fa-solid fa-building-columns mr-1"></i>Departments
             </a>
             <a href="#" class="hover:text-blue-600 transition">
-                <i class="fas fa-sliders mr-1"></i>Settings
+                <i class="fa-solid fa-gear mr-1"></i>Settings
             </a>
-            <a href="logout.jsp" class="text-red-500 hover:text-red-600 transition">
-                <i class="fas fa-right-from-bracket mr-1"></i>Logout
+            <a href="DepLogout" class="text-red-500 hover:text-red-600 transition">
+                <i class="fa-solid fa-arrow-right-from-bracket mr-1"></i>Logout
             </a>
         </nav>
     </div>
@@ -41,62 +41,66 @@
 <!-- Main Content -->
 <main class="flex-grow max-w-7xl mx-auto px-6 py-10">
     <div class="flex justify-between items-center mb-6">
-        <h2 class="text-3xl font-bold text-gray-800">
-            <i class="fas fa-building-columns mr-2 text-blue-600"></i>Department List
+        <h2 class="text-3xl font-bold text-gray-800 flex items-center">
+            <i class="fa-solid fa-building-columns mr-2 text-blue-600"></i>Department List
         </h2>
-        <a href="AddDepartment.jsp"
-           class="bg-blue-600 text-white px-5 py-2 rounded-full hover:bg-blue-700 shadow-md transition inline-flex items-center">
-            <i class="fas fa-plus mr-2"></i>Add Department
+        <a href="AddDepartment.jsp" class="bg-blue-600 text-white px-5 py-2 rounded-full hover:bg-blue-700 shadow-md transition flex items-center">
+            <i class="fa-solid fa-plus mr-2"></i>Add Department
         </a>
     </div>
 
     <!-- Table -->
-    <div class="bg-white shadow-lg rounded-xl overflow-x-auto">
-        <table class="min-w-full text-sm text-left table-auto">
+    <div class="bg-white shadow-md rounded-xl overflow-x-auto">
+        <table class="min-w-[1200px] text-sm text-left table-auto w-full">
             <thead class="bg-blue-600 text-white uppercase text-xs">
-            <tr>
-                <th class="px-6 py-4"><i class="fas fa-hashtag mr-1"></i>ID</th>
-                <th class="px-6 py-4"><i class="fas fa-building mr-1"></i>Department</th>
-                <th class="px-6 py-4"><i class="fas fa-phone mr-1"></i>Contact</th>
-                <th class="px-6 py-4"><i class="fas fa-user-tie mr-1"></i>Head</th>
-                <th class="px-6 py-4 text-center"><i class="fas fa-wrench mr-1"></i>Actions</th>
-            </tr>
+                <tr>
+                    <th class="px-6 py-4"><i class="fa-solid fa-id-badge mr-1"></i>ID</th>
+                    <th class="px-6 py-4"><i class="fa-solid fa-building mr-1"></i>Department Name</th>
+                    <th class="px-6 py-4"><i class="fa-solid fa-phone mr-1"></i>Contact</th>
+                    <th class="px-6 py-4"><i class="fa-solid fa-user-tie mr-1"></i>Head</th>
+                    <th class="px-6 py-4 text-center"><i class="fa-solid fa-wrench mr-1"></i>Actions</th>
+                </tr>
             </thead>
             <tbody class="bg-white divide-y divide-gray-200">
-            <c:forEach var="faculty" items="${allfaculty}">
-                <tr class="hover:bg-gray-50 transition">
-                    <td class="px-6 py-4 font-medium">${faculty.id}</td>
-                    <td class="px-6 py-4">${faculty.name}</td>
-                    <td class="px-6 py-4">${faculty.contact}</td>
-                    <td class="px-6 py-4">${faculty.facultyname}</td>
-                    <td class="px-6 py-4 text-center">
-                        <div class="flex items-center justify-center space-x-4">
+                <c:forEach var="faculty" items="${allfaculty}">
+                    <tr class="hover:bg-gray-50 transition">
+                        <td class="px-6 py-4 font-medium">${faculty.id}</td>
+                        <td class="px-6 py-4">${faculty.name}</td>
+                        <td class="px-6 py-4">${faculty.contact}</td>
+                        <td class="px-6 py-4">${faculty.facultyname}</td>
+                        <td class="px-6 py-4 text-center flex justify-center space-x-4">
                             <a href="UpdateDepartment.jsp?id=${faculty.id}&name=${faculty.name}&contact=${faculty.contact}&facultyname=${faculty.facultyname}"
-                               class="inline-flex items-center text-green-600 hover:text-green-800 font-medium transition">
-                                <i class="fas fa-edit mr-1"></i>Edit
+                               class="inline-flex items-center text-green-600 hover:text-green-800 transition font-semibold">
+                                <i class="fa-solid fa-pen-to-square mr-1"></i>Edit
                             </a>
-                            <form action="DepartmentDeleteServlet" method="post" onsubmit="return confirm('Are you sure you want to delete this department?')">
+                            <form action="DepartmentDeleteServlet" method="post" class="inline">
                                 <input type="hidden" name="id" value="${faculty.id}" />
-                                <button type="submit"
-                                        class="inline-flex items-center bg-red-500 text-white px-4 py-1 rounded-full hover:bg-red-600 transition font-medium">
-                                    <i class="fas fa-trash-alt mr-1"></i>Delete
+                                <button class="inline-flex items-center px-4 py-2 bg-red-500 text-white rounded-full hover:bg-red-600 transition">
+                                    <i class="fa-solid fa-trash mr-2"></i>Delete
                                 </button>
                             </form>
-                        </div>
-                    </td>
-                </tr>
-            </c:forEach>
+                        </td>
+                    </tr>
+                </c:forEach>
             </tbody>
         </table>
     </div>
 </main>
 
 <!-- Footer -->
-<footer class="bg-white border-t shadow-inner mt-10">
-    <div class="max-w-7xl mx-auto px-6 py-6 text-center text-sm text-gray-500">
-        © 2025 BlueHorizon College. Designed for university project by <span class="text-blue-600 font-semibold">Your Name</span>.
+<footer class="bg-white border-t mt-auto">
+    <div class="max-w-7xl mx-auto px-6 py-8 flex flex-col md:flex-row justify-between items-center text-sm text-gray-500">
+      <div class="flex items-center gap-2 mb-4 md:mb-0">
+        <i class="fas fa-shield-halved text-blue-600 text-lg"></i>
+        <span>&copy; 2025 BlueHorizon College. All rights reserved.</span>
+      </div>
+      <div class="flex space-x-4">
+        <a href="#" class="hover:text-blue-600 transition"><i class="fas fa-circle-info mr-1"></i>About</a>
+        <a href="#" class="hover:text-blue-600 transition"><i class="fas fa-lock-keyhole mr-1"></i>Privacy Policy</a>
+        <a href="#" class="hover:text-blue-600 transition"><i class="fas fa-envelope-open-text mr-1"></i>Contact</a>
+      </div>
     </div>
-</footer>
+  </footer>
 
 </body>
 </html>

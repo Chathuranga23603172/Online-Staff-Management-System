@@ -303,6 +303,19 @@
                        <servlet-name>DepartmentDeleteServlet</servlet-name>
                        <url-pattern>/DepartmentDeleteServlet</url-pattern>
         </servlet-mapping>
+                                                              <servlet>
+         
+              <servlet-name>DepLogout</servlet-name>
+              <servlet-class>DepartmentPackage.DepLogout</servlet-class>
+              
+        </servlet>
+         
+         
+         <servlet-mapping>
+                       
+                       <servlet-name>DepLogout</servlet-name>
+                       <url-pattern>/DepLogout</url-pattern>
+        </servlet-mapping>
         
         
         

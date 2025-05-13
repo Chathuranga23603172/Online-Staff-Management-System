@@ -46,28 +46,28 @@
         <!-- Hidden ID -->
         <input type="hidden" name="id" value="<%=id%>" readonly/>
 
-        <!-- Contact Number -->
+        
         <div>
           <label class="block text-sm font-medium text-gray-700">Head of Department</label>
           <input type="tel" name="name" value="<%=name%>" required
                  class="w-full mt-1 rounded-md border-gray-300 shadow-sm focus:ring-blue-500 focus:border-blue-500"
-                 value="${faculty.subject}" placeholder="Mr.">
+                 value="${faculty.name}">
         </div>
 
-        <!-- Department Name -->
+        
         <div>
           <label class="block text-sm font-medium text-gray-700">Contact-Number</label>
           <input type="text" name="subject" value="<%=subject%>" required
                  class="w-full mt-1 rounded-md border-gray-300 shadow-sm focus:ring-blue-500 focus:border-blue-500"
-                 value="${faculty.facultyname}" placeholder="Information Technology">
+                 value="${faculty.subject}">
         </div>
 
-        <!-- Head of Department -->
+        
         <div class="md:col-span-2">
           <label class="block text-sm font-medium text-gray-700">Department Name</label>
           <input type="text" name="facultyname" value="<%=facultyname%>" required
                  class="w-full mt-1 rounded-md border-gray-300 shadow-sm focus:ring-blue-500 focus:border-blue-500"
-                 value="${faculty.name}" placeholder="Mr. John Doe">
+                 value="${faculty.facultyname}">
         </div>
 
         <div class="md:col-span-2 flex justify-end">

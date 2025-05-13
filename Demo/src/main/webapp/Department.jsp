@@ -53,9 +53,9 @@
             </tr>
           </thead>
           <tbody class="text-sm divide-y">
-            <c:forEach var="user" items="${allUsers}">
+            <c:forEach var="faculty" items="${allfaculty}">
               <tr class="hover:bg-blue-50">
-                <td class="px-6 py-4 font-medium">${faculty.name}</td>
+                <td class="px-6 py-4 font-medium">${faculty.id}</td>
                 <td class="px-6 py-4">${faculty.name}</td>
                 <td class="px-6 py-4">${faculty.subject}</td>
                 <td class="px-6 py-4">${faculty.facultyname}</td>

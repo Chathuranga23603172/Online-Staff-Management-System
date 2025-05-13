@@ -6,8 +6,7 @@ import java.sql.Statement;
 import java.util.ArrayList;
 import java.util.List;
 
-import staffPackage.DBConnection;
-import staffPackage.StaffModel;
+
 
 public class UserController {
 	

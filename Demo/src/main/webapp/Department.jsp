@@ -46,28 +46,27 @@
           <thead class="bg-blue-100 text-blue-800 text-sm uppercase">
             <tr>
               <th class="px-6 py-4">ID</th>
-              <th class="px-6 py-4">Full Name</th>
-              <th class="px-6 py-4">Email</th>
-              <th class="px-6 py-4">Password</th>
-              <th class="px-6 py-4">Phone-Number</th>
+              <th class="px-6 py-4">Head Of Department</th>
+              <th class="px-6 py-4">Contact-Number</th>
+              <th class="px-6 py-4">Department Name</th>
               <th class="px-6 py-4">Actions</th>
             </tr>
           </thead>
           <tbody class="text-sm divide-y">
             <c:forEach var="user" items="${allUsers}">
               <tr class="hover:bg-blue-50">
-                <td class="px-6 py-4 font-medium">${user.id}</td>
-                <td class="px-6 py-4">${user.name}</td>
-                <td class="px-6 py-4">${user.gmail}</td>
-                <td class="px-6 py-4">${user.password}</td>
-                <td class="px-6 py-4">${user.phone}</td>
+                <td class="px-6 py-4 font-medium">${faculty.id}</td>
+                <td class="px-6 py-4">${faculty.name}</td>
+                <td class="px-6 py-4">${faculty.subject}</td>
+                <td class="px-6 py-4">${faculty.facultyname}</td>
+              
                 <td class="px-6 py-4 flex gap-3">
-                  <a href="AdminUpdateProfile.jsp?id=${user.id}&name=${user.name}&gmail=${user.gmail}&password=${user.password}&phone=${user.phone}" 
+                  <a href="UpdateDepartment.jsp?id=${faculty.id}&name=${faculty.name}&subject=${faculty.subject}&facultyname=${faculty.facultyname}" 
                      class="text-yellow-500 hover:text-yellow-600">
                     <i class="fas fa-edit"></i>
                   </a>
-                  <form action="AdminUserDeleteServlet" method="post" onsubmit="return confirm('Are you sure?')">
-                    <input type="hidden" name="id" value="${user.id}">
+                  <form action="DepartmentDeleteServlet" method="post" onsubmit="return confirm('Are you sure?')">
+                    <input type="hidden" name="id" value="${faculty.id}.id}">
                     <button type="submit" class="text-red-500 hover:text-red-600">
                       <i class="fas fa-trash-alt"></i>
                     </button>

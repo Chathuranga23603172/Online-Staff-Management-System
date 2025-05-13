@@ -1,99 +1,79 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
-<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>Staff Management - BlueHorizon College</title>
-  <script src="https://cdn.tailwindcss.com"></script>
-  <script defer src="https://unpkg.com/alpinejs@3.x.x/dist/cdn.min.js"></script>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <meta charset="UTF-8">
+    <title>Departments - BlueHorizon College</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
 </head>
-<body class="flex flex-col min-h-screen bg-gray-100 text-gray-800">
+<body class="bg-gray-100 text-gray-800">
 
-  <!-- Navigation Bar -->
-  <header class="bg-white shadow-lg">
-    <div class="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
-      <div class="flex items-center gap-3">
-        <i class="fas fa-graduation-cap text-blue-600 text-3xl"></i>
-        <span class="text-2xl font-bold text-blue-800 tracking-wide">BlueHorizon College</span>
-      </div>
-      <nav class="space-x-6 text-gray-700 font-semibold text-base">
-        <a href="AdminDashboard.jsp" class="hover:text-blue-600 transition"><i class="fas fa-gauge-high mr-1"></i>Dashboard</a>
-        <a href="UserGetAll" class="hover:text-blue-600 transition"><i class="fas fa-user-group mr-1"></i>Staff</a>
-       <a href="#" class="hover:text-blue-600 transition"><i class="fas fa-building mr-1"></i>Departments</a>
-        <a href="#" class="hover:text-blue-600 transition"><i class="fas fa-gears mr-1"></i>Settings</a>
-        <a href="logout.jsp" class="text-red-500 hover:text-red-600 transition"><i class="fas fa-right-from-bracket mr-1"></i>Logout</a>
-      </nav>
-    </div>
-  </header>
+    <!-- Header -->
+    <header class="bg-white shadow sticky top-0 z-50">
+        <div class="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
+            <h1 class="text-2xl font-bold text-blue-700 flex items-center gap-2">
+                <i class="fas fa-university"></i> BlueHorizon College
+            </h1>
+            <nav class="space-x-6 text-gray-700">
+                <a href="dashboard.jsp" class="hover:text-blue-600">Dashboard</a>
+                <a href="displayDepartment.jsp" class="text-blue-600 font-semibold">Departments</a>
+                <a href="logout.jsp" class="hover:text-red-500"><i class="fas fa-sign-out-alt"></i> Logout</a>
+            </nav>
+        </div>
+    </header>
 
-  <!-- Staff Table Section -->
-  <section class="w-full px-8 py-10">
-    <div class="bg-white shadow-lg rounded-xl p-6">
-      <div class="flex items-center justify-between mb-6">
-        <h2 class="text-2xl font-bold text-blue-700 flex items-center gap-2">
-          <i class="fas fa-users"></i> Staff Management
-        </h2>
-        <a href="Register.jsp" 
-           class="bg-blue-600 hover:bg-blue-700 text-white px-5 py-2 rounded-full shadow flex items-center gap-2">
-          <i class="fas fa-user-plus"></i> Add Staff
-        </a>
-      </div>
+    <!-- Main Content -->
+    <main class="max-w-7xl mx-auto px-6 py-8">
+        <div class="flex justify-between items-center mb-6">
+            <h2 class="text-3xl font-bold text-gray-800">Department List</h2>
+            <a href="addDepartment.jsp" class="bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700 shadow">
+                <i class="fas fa-plus mr-2"></i>Add Department
+            </a>
+        </div>
 
-      <div class="overflow-x-auto">
-        <table class="w-full min-w-[1000px] table-auto text-left text-gray-700">
-          <thead class="bg-blue-100 text-blue-800 text-sm uppercase">
-            <tr>
-              <th class="px-6 py-4">ID</th>
-              <th class="px-6 py-4">Department Name</th>
-              <th class="px-6 py-4">Head of Department</th>
-              <th class="px-6 py-4">Contact-Number</th>
-              <th class="px-6 py-4">Actions</th>
-            </tr>
-          </thead>
-          <tbody class="text-sm divide-y">
-            <c:forEach var="faculty" items="${allfaculty}">
-              <tr class="hover:bg-blue-50">
-                <td class="px-6 py-4 font-medium">${faculty.id}</td>
-                <td class="px-6 py-4">${faculty.name}</td>
-                <td class="px-6 py-4">${faculty.subject}</td>
-                <td class="px-6 py-4">${faculty.facultyname}</td>
-              
-                <td class="px-6 py-4 flex gap-3">
-                  <a href="UpdateDepartment.jsp?id=${faculty.id}&name=${faculty.name}&subject=${faculty.subject}&facultyname=${faculty.facultyname}" 
-                     class="text-yellow-500 hover:text-yellow-600">
-                    <i class="fas fa-edit"></i>
-                  </a>
-                  <form action="DepartmentDeleteServlet" method="post" onsubmit="return confirm('Are you sure?')">
-                    <input type="hidden" name="id" value="${faculty.id}.id}">
-                    <button type="submit" class="text-red-500 hover:text-red-600">
-                      <i class="fas fa-trash-alt"></i>
-                    </button>
-                  </form>
-                </td>
-              </tr>
-            </c:forEach>
-          </tbody>
-        </table>
-      </div>
-    </div>
-  </section>
+        <!-- Table -->
+        <div class="bg-white shadow overflow-hidden rounded-lg">
+            <table class="min-w-full text-sm text-left">
+                <thead class="bg-blue-600 text-white uppercase text-xs">
+                    <tr>
+                        <th class="px-6 py-4">ID</th>
+                        <th class="px-6 py-4">Department Name</th>
+                        <th class="px-6 py-4">Head of Department</th>
+                        <th class="px-6 py-4">Contact Number</th>
+                        <th class="px-6 py-4">Actions</th>
+                    </tr>
+                </thead>
+                <tbody class="bg-white divide-y divide-gray-200">
+                    <c:forEach var="dept" items="${departments}">
+                        <tr class="hover:bg-gray-50 transition">
+                            <td class="px-6 py-4 font-medium">${dept.id}</td>
+                            <td class="px-6 py-4">${dept.name}</td>
+                            <td class="px-6 py-4">${dept.head}</td>
+                            <td class="px-6 py-4">${dept.contact}</td>
+                            <td class="px-6 py-4">${dept.faculty}</td>
+                            <td class="px-6 py-4 space-x-3">
+                                <a href="editDepartment.jsp?id=${dept.id}" class="text-green-600 hover:underline">
+                                    <i class="fas fa-edit"></i> Edit
+                                </a>
+                                <a href="deleteDepartment?id=${dept.id}" class="text-red-600 hover:underline" onclick="return confirm('Are you sure?')">
+                                    <i class="fas fa-trash"></i> Delete
+                                </a>
+                            </td>
+                        </tr>
+                    </c:forEach>
+                </tbody>
+            </table>
+        </div>
+    </main>
 
-  <!-- Footer -->
-  <footer class="bg-white border-t mt-auto">
-    <div class="max-w-7xl mx-auto px-6 py-8 flex flex-col md:flex-row justify-between items-center text-sm text-gray-500">
-      <div class="flex items-center gap-2 mb-4 md:mb-0">
-        <i class="fas fa-shield-halved text-blue-600 text-lg"></i>
-        <span>&copy; 2025 BlueHorizon College. All rights reserved.</span>
-      </div>
-      <div class="flex space-x-4">
-        <a href="#" class="hover:text-blue-600 transition"><i class="fas fa-circle-info mr-1"></i>About</a>
-        <a href="#" class="hover:text-blue-600 transition"><i class="fas fa-lock-keyhole mr-1"></i>Privacy Policy</a>
-        <a href="#" class="hover:text-blue-600 transition"><i class="fas fa-envelope-open-text mr-1"></i>Contact</a>
-      </div>
-    </div>
-  </footer>
+    <!-- Footer -->
+    <footer class="bg-white mt-10 py-4 shadow-inner">
+        <div class="max-w-7xl mx-auto px-6 text-center text-sm text-gray-500">
+            © 2025 BlueHorizon College. Designed for university project by <span class="text-blue-600 font-semibold">Your Name</span>.
+        </div>
+    </footer>
 
 </body>
 </html>

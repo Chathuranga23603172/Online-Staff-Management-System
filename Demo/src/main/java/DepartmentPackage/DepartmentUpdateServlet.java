@@ -36,7 +36,7 @@ public class DepartmentUpdateServlet extends HttpServlet {
 			List<FacultyModel> facultydetails = FacultyController.getById(id);
 			request.setAttribute("facultydetails" ,facultydetails);
 			String alertMessage = "Data Updated Successfully";
-			response.getWriter().println("<script> alert('"+alertMessage+"'); window.location.href = 'GetAllServlet'</script>");
+			response.getWriter().println("<script> alert('"+alertMessage+"'); window.location.href = 'DepartmentGetAll'</script>");
 		}
 		else {
 			RequestDispatcher dis2 = request.getRequestDispatcher("wrong.jsp");

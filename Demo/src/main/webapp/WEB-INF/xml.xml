@@ -356,5 +356,31 @@
      	<servlet-name>leaveDeleteServlet</servlet-name>
      	<url-pattern>/leaveDeleteServlet</url-pattern>
      </servlet-mapping> 
-        
+             <servlet>
+     	<servlet-name> BranchInsertServlet</servlet-name>
+     	<servlet-class>BranchPackage.BranchInsertServlet</servlet-class>
+     </servlet>
+     
+     <servlet-mapping>
+     	<servlet-name>BranchInsertServlet</servlet-name>
+     	<url-pattern>/BranchInsertServlet</url-pattern>
+     </servlet-mapping> 
+                  <servlet>
+     	<servlet-name>BranchGetAll</servlet-name>
+     	<servlet-class>BranchPackage.BranchGetAll</servlet-class>
+     </servlet>
+     
+     <servlet-mapping>
+     	<servlet-name>BranchGetAll</servlet-name>
+     	<url-pattern>/BranchGetAll</url-pattern>
+     </servlet-mapping> 
+                       <servlet>
+     	<servlet-name>BranchUpdateServlet</servlet-name>
+     	<servlet-class>BranchPackage.BranchUpdateServlet</servlet-class>
+     </servlet>
+     
+     <servlet-mapping>
+     	<servlet-name>BranchUpdateServlet</servlet-name>
+     	<url-pattern>/BranchUpdateServlet</url-pattern>
+     </servlet-mapping> 
          </web-app>

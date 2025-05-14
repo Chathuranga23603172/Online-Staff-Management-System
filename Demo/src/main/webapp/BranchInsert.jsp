@@ -22,7 +22,7 @@
         <i class="fas fa-gauge-high mr-1"></i>Dashboard
       </a>
       <a href="UserGetAll" class="hover:text-blue-600 transition">
-        <i class="fa-solid fa-users mr-1"></i>Staf
+        <i class="fa-solid fa-users mr-1"></i>Staff
       </a>
       <a href="DepartmentGetAll" class="hover:text-blue-600 transition">
         <i class="fa-solid fa-building-columns mr-1"></i>Departments

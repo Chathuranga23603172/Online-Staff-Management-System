@@ -317,6 +317,44 @@
                        <url-pattern>/DepLogout</url-pattern>
         </servlet-mapping>
         
-        
+           <servlet>
+     	<servlet-name> leaveinsertServlet</servlet-name>
+     	<servlet-class>requestLeavePackage.leaveinsertServlet</servlet-class>
+     </servlet>
+     
+     <servlet-mapping>
+     	<servlet-name>leaveinsertServlet</servlet-name>
+     	<url-pattern>/leaveinsertServlet</url-pattern>
+     </servlet-mapping>
+     
+          <servlet>
+     	<servlet-name> leaveGetAllServlet</servlet-name>
+     	<servlet-class>requestLeavePackage.leaveGetAllServlet</servlet-class>
+     </servlet>
+     
+     <servlet-mapping>
+     	<servlet-name>leaveGetAllServlet</servlet-name>
+     	<url-pattern>/leaveGetAllServlet</url-pattern>
+     </servlet-mapping>
+
+	  <servlet>
+     	<servlet-name> leaveUpdateServlet</servlet-name>
+     	<servlet-class>requestLeavePackage.leaveUpdateServlet</servlet-class>
+     </servlet>
+     
+     <servlet-mapping>
+     	<servlet-name>leaveUpdateServlet</servlet-name>
+     	<url-pattern>/leaveUpdateServlet</url-pattern>
+     </servlet-mapping>
+     
+     <servlet>
+     	<servlet-name> leaveDeleteServlet</servlet-name>
+     	<servlet-class>requestLeavePackage.leaveDeleteServlet</servlet-class>
+     </servlet>
+     
+     <servlet-mapping>
+     	<servlet-name>leaveDeleteServlet</servlet-name>
+     	<url-pattern>/leaveDeleteServlet</url-pattern>
+     </servlet-mapping> 
         
          </web-app>

@@ -22,7 +22,7 @@ public class FacultyController {
 			stmt=con.createStatement();
 			
 			//SQL Query
-			String sql = "INSERT INTO faculty (name, contact, facultyname ) VALUES ( '"+facultyname+"','"+contact+"','"+name+"')";
+			String sql = "INSERT INTO faculty (facultyname, contact, name ) VALUES ( '"+facultyname+"','"+contact+"','"+name+"')";
 			int rs = stmt.executeUpdate(sql);
 			if(rs>0) {
 				isSuccess = true;
@@ -146,6 +146,3 @@ public class FacultyController {
 			return isSuccess;
 		}
 }
-	
-	
-

@@ -67,9 +67,9 @@
                 <c:forEach var="faculty" items="${allfaculty}">
                     <tr class="hover:bg-gray-50 transition">
                         <td class="px-6 py-4 font-medium">${faculty.id}</td>
-                        <td class="px-6 py-4">${faculty.name}</td>
-                        <td class="px-6 py-4">${faculty.contact}</td>
                         <td class="px-6 py-4">${faculty.facultyname}</td>
+                        <td class="px-6 py-4">${faculty.contact}</td>
+                        <td class="px-6 py-4">${faculty.name}</td>
                         <td class="px-6 py-4 text-center flex justify-center space-x-4">
                             <a href="UpdateDepartment.jsp?id=${faculty.id}&name=${faculty.name}&contact=${faculty.contact}&facultyname=${faculty.facultyname}"
                                class="inline-flex items-center text-green-600 hover:text-green-800 transition font-semibold">

@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 </head>
 <body class="bg-gradient-to-br from-blue-50 to-blue-100 text-gray-800 min-h-screen flex flex-col">
+
 <%
     String id = request.getParameter("id");
     String location = request.getParameter("location");
@@ -39,45 +40,46 @@
         <h2 class="text-4xl font-bold mb-12 text-blue-800 flex items-center">
             <i class="fa-solid fa-pen-to-square mr-3"></i>Update Branch
         </h2>
-<form action="BranchUpdateServlet" method="post" class="grid grid-cols-1 md:grid-cols-2 gap-10">
+        <form action="BranchUpdateServlet" method="post" class="grid grid-cols-1 md:grid-cols-2 gap-10">
 
-    <div class="col-span-1">
-        <label class="block mb-2 text-lg font-semibold text-gray-700"><i class="fa-solid fa-id-badge mr-1"></i>ID</label>
-        <input type="text" name="id" value="<%=id%>" readonly
-               class="w-full px-5 py-4 border border-gray-300 rounded-xl bg-gray-100 text-gray-700 shadow-sm focus:outline-none" />
-    </div>
+            <div class="col-span-1">
+                <label class="block mb-2 text-lg font-semibold text-gray-700"><i class="fa-solid fa-id-badge mr-1"></i>ID</label>
+                <input type="text" name="id" value="<%=id%>" readonly
+                       class="w-full px-5 py-4 border border-gray-300 rounded-xl bg-gray-100 text-gray-700 shadow-sm focus:outline-none" />
+            </div>
 
-    <div class="col-span-1">
-        <label class="block mb-2 text-lg font-semibold text-gray-700"><i class="fa-solid fa-location-dot mr-1"></i>Location</label>
-        <input type="text" name="location" value="<%=location%>" required
-               class="w-full px-5 py-4 border border-blue-300 rounded-xl focus:outline-none focus:ring-2 focus:ring-blue-400 shadow-md" />
-    </div>
+            <div class="col-span-1">
+                <label class="block mb-2 text-lg font-semibold text-gray-700"><i class="fa-solid fa-location-dot mr-1"></i>Location</label>
+                <input type="text" name="location" value="<%=location%>" required
+                       class="w-full px-5 py-4 border border-blue-300 rounded-xl focus:outline-none focus:ring-2 focus:ring-blue-400 shadow-md" />
+            </div>
 
-    <div class="col-span-1">
-        <label class="block mb-2 text-lg font-semibold text-gray-700"><i class="fa-solid fa-user-tie mr-1"></i>Manager</label>
-        <input type="text" name="manager" value="<%=manager%>" required
-               class="w-full px-5 py-4 border border-blue-300 rounded-xl focus:outline-none focus:ring-2 focus:ring-blue-400 shadow-md" />
-    </div>
+            <div class="col-span-1">
+                <label class="block mb-2 text-lg font-semibold text-gray-700"><i class="fa-solid fa-user-tie mr-1"></i>Manager</label>
+                <input type="text" name="manager" value="<%=manager%>" required
+                       class="w-full px-5 py-4 border border-blue-300 rounded-xl focus:outline-none focus:ring-2 focus:ring-blue-400 shadow-md" />
+            </div>
 
-    <div class="col-span-1">
-        <label class="block mb-2 text-lg font-semibold text-gray-700"><i class="fa-solid fa-phone mr-1"></i>Contact</label>
-        <input type="text" name="contact" value="<%=contact%>" required
-               class="w-full px-5 py-4 border border-blue-300 rounded-xl focus:outline-none focus:ring-2 focus:ring-blue-400 shadow-md" />
-    </div>
+            <div class="col-span-1">
+                <label class="block mb-2 text-lg font-semibold text-gray-700"><i class="fa-solid fa-phone mr-1"></i>Contact</label>
+                <input type="text" name="contact" value="<%=contact%>" required
+                       pattern="^07[0-9]{8}$" maxlength="10"
+                       title="Contact number must start with 07 and be 10 digits long"
+                       class="w-full px-5 py-4 border border-blue-300 rounded-xl focus:outline-none focus:ring-2 focus:ring-blue-400 shadow-md" />
+            </div>
 
-    <!-- Buttons Row -->
-    <div class="md:col-span-2 flex justify-between items-center pt-6">
-        <a href="BranchGetAll" class="text-gray-600 hover:text-blue-600 font-medium text-lg transition duration-200">
-            <i class="fa-solid fa-arrow-left mr-1"></i>Back to List
-        </a>
-        <button type="submit"
-                class="bg-blue-600 text-white px-10 py-4 rounded-xl hover:bg-blue-700 transition duration-200 font-semibold text-lg shadow-md hover:shadow-lg">
-            <i class="fa-solid fa-check mr-2"></i>Update Branch
-        </button>
-    </div>
+            <!-- Buttons Row -->
+            <div class="md:col-span-2 flex justify-between items-center pt-6">
+                <a href="BranchGetAll" class="text-gray-600 hover:text-blue-600 font-medium text-lg transition duration-200">
+                    <i class="fa-solid fa-arrow-left mr-1"></i>Back to List
+                </a>
+                <button type="submit"
+                        class="bg-blue-600 text-white px-10 py-4 rounded-xl hover:bg-blue-700 transition duration-200 font-semibold text-lg shadow-md hover:shadow-lg">
+                    <i class="fa-solid fa-check mr-2"></i>Update Branch
+                </button>
+            </div>
 
-</form>
-
+        </form>
     </div>
 </main>
 

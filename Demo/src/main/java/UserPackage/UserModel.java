@@ -1,13 +1,16 @@
 package UserPackage;
 
 public class UserModel {
-
+	
+//Encapsulation
 	
     private int id;
     private String name;
     private String gmail;
     private String password;
     private String phone;
+    
+    //Constructors
 	public UserModel(int id, String name, String gmail, String password, String phone) {
 		super();
 		this.id = id;
@@ -15,6 +18,8 @@ public class UserModel {
 		this.gmail = gmail;
 		this.password = password;
 		this.phone = phone;
+		
+		//Methods/Getters and Setters
 	}
 	public int getId() {
 		return id;

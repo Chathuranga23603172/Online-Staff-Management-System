@@ -9,6 +9,8 @@ import java.util.List;
 import DepartmentPackage.DBConnection;
 import DepartmentPackage.FacultyModel;
 
+//Abstraction
+
 public class BranchController {
 	
 	private static boolean isSuccess;

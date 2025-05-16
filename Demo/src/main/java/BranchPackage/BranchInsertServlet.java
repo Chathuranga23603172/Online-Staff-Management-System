@@ -13,10 +13,12 @@ import javax.servlet.http.HttpServletResponse;
 
 
 @WebServlet("/BranchInsertServlet")
+//inharitance
+
 public class BranchInsertServlet extends HttpServlet {
 	private static final long serialVersionUID = 1L;
 
-
+//polymorphysm
 
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		

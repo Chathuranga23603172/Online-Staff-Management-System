@@ -1,6 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
   <meta charset="UTF-8">
   <title>Add New Branch - BlueHorizon College</title>
@@ -62,7 +62,9 @@
       <!-- Contact -->
       <div>
         <label class="block font-medium text-blue-800">Contact Number:</label>
-        <input type="tel" name="contact" placeholder="Enter contact number" required
+        <input type="tel" name="contact" placeholder="Enter contact number (Ex: 07XXXXXXXX)" required
+               pattern="^07[0-9]{8}$" maxlength="10"
+               title="Phone number must start with 07 and contain exactly 10 digits"
                class="w-full mt-1 p-3 border border-gray-300 rounded" />
       </div>
 

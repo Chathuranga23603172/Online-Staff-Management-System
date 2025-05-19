@@ -12,33 +12,22 @@
 <body class="bg-gray-100 text-gray-800 min-h-screen flex flex-col">
 
 <!-- Header -->
-<header class="bg-white shadow-md">
+  <header class="bg-white shadow-lg bg-opacity-90">
     <div class="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
-        <div class="flex items-center gap-3">
-            <i class="fa-solid fa-graduation-cap text-blue-600 text-3xl"></i>
-            <span class="text-2xl font-bold text-blue-800">BlueHorizon College</span>
-        </div>
-        <nav class="space-x-6 text-gray-700 font-medium">
-            <a href="AdminDashboard.jsp" class="hover:text-blue-600 transition">
-                <i class="fas fa-gauge-high mr-1"></i>Dashboard
-            </a>
-            <a href="UserGetAll" class="hover:text-blue-600 transition">
-                <i class="fa-solid fa-users mr-1"></i>Staff
-            </a>
-            <a href="DepartmentGetAll" class="text-blue-600 font-semibold">
-                <i class="fa-solid fa-building-columns mr-1"></i>Departments
-            </a>
-           <a href="#" class="hover:text-blue-600 transition">
-    <i class="fa-solid fa-calendar-check mr-1"></i>Leave Requests
-         </a>
-
-           
-            <a href="DepLogout" class="text-red-500 hover:text-red-600 transition">
-                <i class="fa-solid fa-arrow-right-from-bracket mr-1"></i>Logout
-            </a>
-        </nav>
+      <div class="flex items-center gap-3">
+        <i class="fas fa-graduation-cap text-blue-600 text-3xl"></i>
+        <span class="text-2xl font-bold text-blue-800 tracking-wide">BlueHorizon College</span>
+      </div>
+      <nav class="space-x-6 text-gray-700 font-semibold text-base">
+        <a href="AdminDashboard.jsp" class="hover:text-blue-600 transition"><i class="fas fa-gauge-high mr-1"></i>Dashboard</a>
+        <a href="UserGetAll" class="hover:text-blue-600 transition"><i class="fas fa-user-group mr-1"></i>Staff</a>
+        <a href="DepartmentGetAll" class="hover:text-blue-600 transition"><i class="fas fa-building mr-1"></i>Departments</a>
+        <a href="leaveGetAllServlet" class="hover:text-blue-600 transition"><i class="fa-solid fa-calendar-check mr-1"></i>Leave Requests</a>
+        <a href="BranchGetAll" class="hover:text-blue-600 transition"><i class="fa-solid fa-envelope-open-text mr-1"></i>Branches</a>
+        <a href="AdminLogoutServlet" class="text-red-500 hover:text-red-600 transition"><i class="fas fa-right-from-bracket mr-1"></i>Logout</a>
+      </nav>
     </div>
-</header>
+  </header>
 
 <!-- Main Content -->
 <main class="flex-grow max-w-7xl mx-auto px-6 py-10">

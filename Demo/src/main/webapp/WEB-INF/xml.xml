@@ -383,4 +383,19 @@
      	<servlet-name>BranchUpdateServlet</servlet-name>
      	<url-pattern>/BranchUpdateServlet</url-pattern>
      </servlet-mapping> 
+     
+                                          <servlet>
+         
+              <servlet-name>DisplayDepartment</servlet-name>
+              <servlet-class>DepartmentPackage.DisplayDepartment</servlet-class>
+              
+        </servlet>
+         
+         
+         <servlet-mapping>
+                       
+                       <servlet-name>DisplayDepartment</servlet-name>
+                       <url-pattern>/DisplayDepartment</url-pattern>
+        </servlet-mapping>
+     
          </web-app>

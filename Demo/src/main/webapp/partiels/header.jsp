@@ -33,7 +33,7 @@
             <nav class="hidden md:flex space-x-6 text-gray-700">
                 <a href="#" class="hover:text-blue-500">Home</a>
                 <a href="requestinsert.jsp" class="hover:text-blue-500">Leave Request</a>
-                <a href="#" class="hover:text-blue-500">Department</a>
+                <a href="DisplayDepartment" class="hover:text-blue-500">Department</a>
                 <a href="#" class="hover:text-blue-500">Contact</a>
                 <a href="#" class="hover:text-blue-500">About</a>
             </nav>

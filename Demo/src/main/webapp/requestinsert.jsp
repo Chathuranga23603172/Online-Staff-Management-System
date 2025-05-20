@@ -17,23 +17,41 @@
 </head>
 <body class="bg-gray-100 text-gray-800 min-h-screen flex flex-col">
 
-<!-- Header -->
-  <header class="bg-white shadow-lg bg-opacity-90">
-    <div class="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
-      <div class="flex items-center gap-3">
-        <i class="fas fa-graduation-cap text-blue-600 text-3xl"></i>
-        <span class="text-2xl font-bold text-blue-800 tracking-wide">BlueHorizon College</span>
-      </div>
-      <nav class="space-x-6 text-gray-700 font-semibold text-base">
-        <a href="AdminDashboard.jsp" class="hover:text-blue-600 transition"><i class="fas fa-gauge-high mr-1"></i>Dashboard</a>
-        <a href="UserGetAll" class="hover:text-blue-600 transition"><i class="fas fa-user-group mr-1"></i>Staff</a>
-        <a href="DepartmentGetAll" class="hover:text-blue-600 transition"><i class="fas fa-building mr-1"></i>Departments</a>
-        <a href="leaveGetAllServlet" class="hover:text-blue-600 transition"><i class="fa-solid fa-calendar-check mr-1"></i>Leave Requests</a>
-        <a href="BranchGetAll" class="hover:text-blue-600 transition"><i class="fa-solid fa-envelope-open-text mr-1"></i>Branches</a>
-        <a href="AdminLogoutServlet" class="text-red-500 hover:text-red-600 transition"><i class="fas fa-right-from-bracket mr-1"></i>Logout</a>
-      </nav>
-    </div>
-  </header>
+ <header class="bg-white shadow-md">
+        <div class="container mx-auto px-6 py-4 flex items-center justify-between">
+            
+            <!-- Logo -->
+           <h2 class="text-xl font-bold text-blue flex items-center gap-2">
+        <i class="fas fa-graduation-cap text-blue-500"></i> BlueHorizon College
+      </h2>
+
+            <!-- Search Bar -->
+            <div class="hidden md:flex items-center border rounded-lg overflow-hidden w-1/3">
+                <input type="text" class="w-full px-4 py-2 outline-none" placeholder="Search">
+                <button class="bg-blue-500 px-4 py-2 text-white">
+                    <i class="fas fa-search"></i>
+                </button>
+            </div>
+
+            <!-- Navigation Links -->
+            <nav class="hidden md:flex space-x-6 text-gray-700">
+                <a href="HomePage.jsp" class="hover:text-blue-500">Home</a>
+                <a href="requestinsert.jsp" class="hover:text-blue-500">Leave Request</a>
+                <a href="#" class="hover:text-blue-500">Department</a>
+                <a href="#" class="hover:text-blue-500">Contact</a>
+                <a href="#" class="hover:text-blue-500">About</a>
+            </nav>
+
+            <!-- User & Cart Icons -->
+            <div class="flex items-center space-x-4">
+                <a href="ProfileServlet" class="text-gray-700 hover:text-blue-500">
+                    <i class="far fa-user text-xl"></i>
+                </a>
+
+            </div>
+
+        </div>
+    </header>
 
 <head>
 <body class="bg-gray-100 min-h-screen flex flex-col">

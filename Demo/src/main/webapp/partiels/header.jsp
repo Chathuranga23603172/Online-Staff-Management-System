@@ -11,7 +11,7 @@
     <script src="https://kit.fontawesome.com/46b998f154.js" crossorigin="anonymous"></script>
     <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
 </head>
-<body class="bg-gray-100">
+<body class="flex flex-col min-h-screen bg-gray-100">
     <!-- Header Navigation Bar -->
     <header class="bg-white shadow-md">
         <div class="container mx-auto px-6 py-4 flex items-center justify-between">
@@ -31,11 +31,12 @@
 
             <!-- Navigation Links -->
             <nav class="hidden md:flex space-x-6 text-gray-700">
-                <a href="#" class="hover:text-blue-500">Home</a>
+                <a href="HomePage.jsp" class="hover:text-blue-500">Home</a>
                 <a href="requestinsert.jsp" class="hover:text-blue-500">Leave Request</a>
-                <a href="#" class="hover:text-blue-500">Department</a>
-                <a href="#" class="hover:text-blue-500">Contact</a>
-                <a href="#" class="hover:text-blue-500">About</a>
+                <a href="DisplayDepartment" class="hover:text-blue-500">Department</a>
+                <a href="DisplayBranch" class="hover:text-blue-500">Branches</a>
+                <a href="Contactus.jsp" class="hover:text-blue-500">Contact</a>
+                <a href="Aboutus.jsp" class="hover:text-blue-500">About</a>
             </nav>
 
             <!-- User & Cart Icons -->

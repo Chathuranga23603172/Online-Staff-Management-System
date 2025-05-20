@@ -34,9 +34,11 @@
                 <a href="HomePage.jsp" class="hover:text-blue-500">Home</a>
                 <a href="requestinsert.jsp" class="hover:text-blue-500">Leave Request</a>
                 <a href="DisplayDepartment" class="hover:text-blue-500">Department</a>
+
                 <a href="DisplayBranch" class="hover:text-blue-500">Branches</a>
                 <a href="Contactus.jsp" class="hover:text-blue-500">Contact</a>
                 <a href="Aboutus.jsp" class="hover:text-blue-500">About</a>
+
             </nav>
 
             <!-- User & Cart Icons -->

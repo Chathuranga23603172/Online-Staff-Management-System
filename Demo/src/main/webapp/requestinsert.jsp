@@ -29,15 +29,13 @@
                 <i class="fa-solid fa-building-columns mr-1"></i>Departments
             </a>
             
-             </a>
-            <a href="DepartmentGetAll" class="hover:text-blue-600 transition">
-                <i class="fa-solid fa-building-columns mr-1"></i>Branches
-            </a>
-            
-           <a href="leaveGetAllServlet" class="hover:text-blue-600 transition">
+            <a href="leaveGetAllServlet" class="hover:text-blue-600 transition">
     <i class="fa-solid fa-calendar-check mr-1"></i>Leave Requests
          </a>
-
+         
+         
+                     <a href="BranchGetAll" class="hover:text-blue-600 transition"><i class="fa-solid fa-envelope-open-text mr-1"></i>Branches</a>
+            
            
             <a href="DepLogout" class="text-red-500 hover:text-red-600 transition">
                 <i class="fa-solid fa-arrow-right-from-bracket mr-1"></i>Logout

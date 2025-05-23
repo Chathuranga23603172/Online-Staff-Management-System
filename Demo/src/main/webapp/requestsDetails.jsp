@@ -6,13 +6,13 @@
 <html>
 <head>
   <meta charset="UTF-8">
-  <title>Add Department</title>
+  <title>Add Leave Request</title>
   <script src="https://cdn.tailwindcss.com"></script>
   <script defer src="https://unpkg.com/alpinejs@3.x.x/dist/cdn.min.js"></script>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 <head>
     <meta charset="UTF-8">
-    <title>Departments - BlueHorizon College</title>
+    <title>Leave Request - BlueHorizon College</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <script defer src="https://unpkg.com/alpinejs@3.x.x/dist/cdn.min.js"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">

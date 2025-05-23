@@ -59,11 +59,13 @@
                class="w-full mt-1 p-3 border border-gray-300 rounded" />
       </div>
 
-      <div>
+     <div>
         <label class="block font-medium text-blue-800">Phone No:</label>
         <input type="tel" name="phoneNo" value="<%=phoneNo%>" required
-               class="w-full mt-1 p-3 border border-gray-300 rounded" />
-      </div>
+       pattern="07[0-9]{8}" title="Phone number must start with 07 and be exactly 10 digits."
+       class="w-full mt-1 p-3 border border-gray-300 rounded" />
+
+      </div>
 
       <div>
         <label class="block font-medium text-blue-800">Request:</label>

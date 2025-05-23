@@ -5,9 +5,9 @@ import java.sql.DriverManager;
 
 public class DBConnection {
 	
-	private static String url = "jdbc:mysql://localhost:3306/demo";
+	private static String url = "jdbc:mysql://localhost:3306/requestleave";
 	private static String user = "root";
-	private static String pass = "root";
+	private static String pass = "admin";
 	private static Connection con;
 	
 	public static Connection getConnection() {

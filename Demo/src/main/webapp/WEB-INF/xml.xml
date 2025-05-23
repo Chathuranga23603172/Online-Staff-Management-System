@@ -356,6 +356,7 @@
      	<servlet-name>leaveDeleteServlet</servlet-name>
      	<url-pattern>/leaveDeleteServlet</url-pattern>
      </servlet-mapping> 
+     
              <servlet>
      	<servlet-name> BranchInsertServlet</servlet-name>
      	<servlet-class>BranchPackage.BranchInsertServlet</servlet-class>

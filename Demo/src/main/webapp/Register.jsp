@@ -11,7 +11,7 @@
     <!-- Main Register Form -->
     <main class="flex-grow flex items-center justify-center px-4 py-10">
         <div class="bg-white rounded-xl shadow-2xl p-8 w-full max-w-md text-center">
-            <h2 class="text-3xl font-bold text-blue-700 mb-6">Register</h2>
+            <h2 class="text-3xl font-bold text-blue-700 mb-6">Teacher Register</h2>
 
             <form action="UserInsertServlet" method="post" class="space-y-5">
                 

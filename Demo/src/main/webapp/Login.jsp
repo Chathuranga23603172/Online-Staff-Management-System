@@ -13,7 +13,7 @@
     <header class="bg-white shadow-md">
         <nav class="flex justify-center items-center gap-8 py-4">
             <div class="text-2xl font-bold text-blue-700">BlueHorizon</div>
-            <a href="dashboard.jsp" class="text-gray-800 hover:text-blue-600">Home</a>
+            <a href="HomePage.jsp" class="text-gray-800 hover:text-blue-600">Home</a>
             <a href="Aboutus.jsp" class="text-gray-800 hover:text-blue-600">About Us</a>
             <a href="Contactus.jsp" class="text-gray-800 hover:text-blue-600">Contact Us</a>
         </nav>

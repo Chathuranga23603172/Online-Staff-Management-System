@@ -104,26 +104,23 @@
     </div>
 
     </section>
+    
+    <!-- Vision and Mission Section -->
+<section class="bg-white py-12">
+    <div class="container mx-auto px-6 text-center">
+        <h2 class="text-3xl md:text-4xl font-bold text-blue-600 mb-6">Our Vision</h2>
+        <p class="text-lg text-gray-700 max-w-3xl mx-auto mb-10">
+            To be a center of excellence that empowers students with knowledge, skills, and values to thrive in a changing world.
+        </p>
+        <h2 class="text-3xl md:text-4xl font-bold text-blue-600 mb-6">Our Mission</h2>
+        <p class="text-lg text-gray-700 max-w-3xl mx-auto">
+            Horizen College is committed to providing a supportive and innovative learning environment that nurtures academic achievement, character development, and lifelong learning for all students.
+        </p>
+    </div>
+</section>
+    
 
-<section class="container mx-auto px-6 py-10">
-        <h2 class="text-3xl font-bold text-gray-800 mb-6">Admin Panel</h2>
 
-        <div class="grid grid-cols-2 md:grid-cols-4 gap-6">
-            
-            <c:forEach var="Admin" items="${admins}">
-	            <div class="bg-white shadow-lg rounded-lg overflow-hidden hover:scale-105 transition">
-	                <img src="assets/admins/${Admin.filename}" alt="admin 1" class="w-full h-52 object-cover">
-	                <div class="p-4">	
-	                     <h3 class="text-lg font-semibold text-gray-800">${Admin.name}</h3>
-	                    <p class="text-blue-500 font-bold mt-1">${Admin.degree}</p>
-	                    <button class="mt-3 bg-blue-500 text-white px-4 py-2 rounded-lg w-full hover:bg-blue-600 transition">
-	                        Contact
-	                    </button>
-	                </div>
-	            </div>
-			</c:forEach>
-        </div>
-    </section>
     <%@ include file="./partiels/footer.jsp"%> 
 
     

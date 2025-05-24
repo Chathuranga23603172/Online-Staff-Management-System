@@ -203,17 +203,7 @@
         </div>
 
         <div class="cards-container">
-            <!-- Admin Card -->
-            <div class="user-card admin-card" onclick="redirectToLogin('admin')">
-                <div class="card-icon">
-                    <i class="fas fa-user-shield"></i>
-                </div>
-                <h3 class="card-title">Admin</h3>
-                <p class="card-description">
-                    System administrators with full access to manage users, settings, and system configurations.
-                </p>
-                <button class="card-button">Sign Up as Admin</button>
-            </div>
+        
 
             <!-- Teacher Card -->
             <div class="user-card teacher-card" onclick="redirectToLogin('teacher')">

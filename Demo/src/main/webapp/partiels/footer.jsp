@@ -45,6 +45,6 @@
 
   <!-- Bottom -->
   <div class="border-t border-gray-700 mt-8 pt-4 text-center text-sm text-gray-500">
-    © 2025 BlueHorizon College. All rights reserved. Designed & Developed by <a href="#" class="text-blue-400 hover:underline">Nirmal Chathuranga</a>
+    © 2025 BlueHorizon College. All rights reserved. Designed & Developed by <a href="#" class="text-blue-400 hover:underline">Our Panel</a>
   </div>
 </footer>
